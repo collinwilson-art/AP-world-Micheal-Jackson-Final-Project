@@ -2,66 +2,56 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Michael Jackson | Ultimate Documentary</title>
+<title>Michael Jackson | Full Historical Archive</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 body{
     margin:0;
     font-family:Arial, sans-serif;
-    background:black;
-    color:white;
-    scroll-behavior:smooth;
+    background:#000;
+    color:#fff;
+    line-height:1.7;
 }
 
-/* NAV */
 nav{
-    position:fixed;
+    position:sticky;
     top:0;
-    width:100%;
-    background:rgba(0,0,0,0.9);
+    background:#111;
     display:flex;
     justify-content:center;
     gap:12px;
     padding:10px;
     border-bottom:1px solid gold;
-    z-index:1000;
 }
+
 nav a{
     color:white;
     text-decoration:none;
     font-weight:bold;
 }
 
-/* SECTIONS */
 section{
-    min-height:100vh;
-    padding:90px 12%;
-    opacity:0;
-    transform:translateY(30px);
-    transition:1s ease;
-}
-section.visible{
-    opacity:1;
-    transform:translateY(0);
+    padding:70px 12%;
 }
 
-h1,h2{ color:gold; }
+h1,h2{
+    color:gold;
+}
 
-/* CARDS */
 .card{
     background:#111;
     padding:18px;
+    border-radius:10px;
     margin-top:15px;
-    border-radius:12px;
     border:1px solid #222;
 }
 
-/* ALBUMS */
+/* albums */
 .album{
     background:#151515;
     padding:15px;
-    margin:10px 0;
+    margin-bottom:12px;
     border-radius:10px;
     border:1px solid #333;
 }
@@ -69,8 +59,8 @@ h1,h2{ color:gold; }
 details{
     background:#0f0f0f;
     padding:10px;
-    border-radius:8px;
     margin-top:8px;
+    border-radius:8px;
 }
 
 summary{
@@ -78,44 +68,29 @@ summary{
     cursor:pointer;
 }
 
-/* RUBRIC */
 button{
     background:gold;
     border:none;
-    padding:10px;
+    padding:8px;
     margin:5px;
-    font-weight:bold;
     cursor:pointer;
+    font-weight:bold;
 }
 
 .hidden{ display:none; }
 
-/* MAP */
-.map{
+.timeline{
     display:flex;
-    justify-content:space-around;
+    overflow-x:auto;
+    gap:12px;
+}
+
+.event{
+    min-width:250px;
     background:#111;
-    padding:30px;
-    border-radius:10px;
-}
-
-.dot{
-    width:15px;
-    height:15px;
-    background:gold;
-    border-radius:50%;
-    position:relative;
-}
-
-.dot:hover::after{
-    content:attr(data);
-    position:absolute;
-    background:black;
     border:1px solid gold;
-    padding:5px;
-    top:-40px;
-    left:-40px;
-    white-space:nowrap;
+    padding:12px;
+    border-radius:10px;
 }
 </style>
 </head>
@@ -137,31 +112,38 @@ button{
 <section id="origins">
 <h2>Origins</h2>
 <div class="card">
-Michael Jackson grew up in Gary, Indiana under strict discipline and industrial music pressure.
+Michael Jackson was born in Gary, Indiana (1958).  
+He grew up in a working-class household under strict discipline from Joseph Jackson.
 
-Key forces:
-- Joseph Jackson’s strict training system
-- Motown structured performance system
-- early exposure to gospel + R&B
+Key influences:
+- church/gospel music
+- Motown system
+- early touring exposure
 
-Result: extreme performance precision from childhood.
+This created extreme early-stage professionalism and perfectionism.
 </div>
 </section>
 
 <!-- JACKSON 5 -->
 <section id="jackson5">
-<h2>Jackson 5</h2>
+<h2>Jackson 5 Era</h2>
 <div class="card">
 
-Michael became lead singer at ~11 due to vocal dominance.
+Michael became lead singer at age ~11 due to vocal strength and emotional performance ability.
 
-Songs:
+Life conditions:
+- strict rehearsals
+- constant touring
+- family-controlled management system
+
+Key songs:
 - I Want You Back
 - ABC
 - The Love You Save
 - I’ll Be There
+- Dancing Machine
 
-Represents early industrial child stardom.
+This period shaped him into a disciplined global performer at an extremely young age.
 
 </div>
 </section>
@@ -169,61 +151,93 @@ Represents early industrial child stardom.
 <!-- TIMELINE -->
 <section id="timeline">
 <h2>Timeline</h2>
-<div class="card">
-1969 → Jackson 5 debut  
-1979 → Off the Wall  
-1982 → Thriller  
-1983 → Moonwalk  
-1984 → Pepsi accident  
-1987 → Bad tour  
-1993 → Super Bowl  
-2009 → Death  
+
+<div class="timeline">
+<div class="event">1958 – Born</div>
+<div class="event">1969 – Jackson 5 debut</div>
+<div class="event">1979 – Off the Wall</div>
+<div class="event">1982 – Thriller</div>
+<div class="event">1983 – Moonwalk debut</div>
+<div class="event">1984 – Pepsi accident (burn injury)</div>
+<div class="event">1987 – Bad era</div>
+<div class="event">1993 – Super Bowl performance</div>
+<div class="event">2005 – Trial</div>
+<div class="event">2009 – Death</div>
 </div>
+
 </section>
 
 <!-- ALBUMS -->
 <section id="albums">
-<h2>Albums</h2>
+<h2>Albums (Full Studio Discography)</h2>
 
 <div class="album">
-<b>Thriller</b>
+<h3>Off the Wall (1979)</h3>
 <details><summary>Tracks</summary>
-Billie Jean, Beat It, Thriller, Wanna Be Startin Something
+Don’t Stop ’Til You Get Enough<br>
+Rock With You<br>
+Workin’ Day and Night<br>
+She’s Out of My Life
 </details>
 </div>
 
 <div class="album">
-<b>Bad</b>
+<h3>Thriller (1982)</h3>
 <details><summary>Tracks</summary>
-Smooth Criminal, Man in the Mirror, Bad
+Billie Jean<br>
+Beat It<br>
+Thriller<br>
+Wanna Be Startin’ Somethin’<br>
+Human Nature
 </details>
 </div>
 
 <div class="album">
-<b>Dangerous</b>
+<h3>Bad (1987)</h3>
 <details><summary>Tracks</summary>
-Black or White, Heal the World, Jam
+Smooth Criminal<br>
+Man in the Mirror<br>
+Bad<br>
+Dirty Diana
 </details>
 </div>
 
 <div class="album">
-<b>HIStory</b>
+<h3>Dangerous (1991)</h3>
 <details><summary>Tracks</summary>
-Earth Song, Scream, They Don’t Care About Us
+Black or White<br>
+Heal the World<br>
+Remember the Time<br>
+Jam
 </details>
 </div>
 
 <div class="album">
-<b>Invincible</b>
+<h3>HIStory (1995)</h3>
 <details><summary>Tracks</summary>
-You Rock My World, Butterflies
+Scream<br>
+They Don’t Care About Us<br>
+Earth Song<br>
+Stranger in Moscow
 </details>
 </div>
 
 <div class="album">
-<b>Xscape</b>
-<details><summary>Posthumous</summary>
-Unreleased modernized MJ tracks
+<h3>Invincible (2001)</h3>
+<details><summary>Tracks</summary>
+You Rock My World<br>
+Butterflies<br>
+Cry<br>
+Break of Dawn
+</details>
+</div>
+
+<div class="album">
+<h3>Xscape (2014)</h3>
+<details><summary>Tracks</summary>
+Love Never Felt So Good<br>
+A Place With No Name<br>
+Chicago
 </details>
 </div>
 
@@ -231,88 +245,76 @@ Unreleased modernized MJ tracks
 
 <!-- FASHION -->
 <section id="fashion">
-<h2>Fashion</h2>
+<h2>Fashion & Identity</h2>
 <div class="card">
-- red Thriller jacket  
-- white glove  
-- fedora  
-- military jackets  
-- vitiligo influenced appearance adaptation  
+Michael Jackson’s visual identity included:
+- single white glove
+- red Thriller jacket
+- military Bad jackets
+- fedora + sunglasses
+
+He also lived with vitiligo, a skin pigmentation condition that affected his appearance over time, influencing stage makeup and styling choices.
 </div>
 </section>
 
 <!-- SUPER BOWL -->
 <section id="superbowl">
-<h2>Super Bowl 1993</h2>
+<h2>Super Bowl XXVII (1993)</h2>
 <div class="card">
-Held at Rose Bowl Stadium.
+Held at the Rose Bowl Stadium (California).
 
-Performed:
+Performance:
 - Jam
 - Billie Jean
 - Black or White
 - Heal the World
 
-Changed halftime shows forever.
+He stood in silence for over 90 seconds before starting — redefining halftime show structure forever.
 </div>
 </section>
 
 <!-- CONTROVERSY -->
 <section id="controversy">
-<h2>Controversy</h2>
+<h2>Controversy & Public Scrutiny</h2>
 <div class="card">
-Faced multiple allegations (1990s–2000s).  
-2005 trial → acquitted.  
-Public opinion remains divided historically.
+Michael Jackson faced multiple child abuse allegations during his lifetime.
 
-Macaulay Culkin denied abuse allegations.
+Key facts:
+- 2005 trial → acquitted of all charges
+- media scrutiny heavily influenced public perception
+- Macaulay Culkin denied abuse allegations and described friendship positively
+
+His legacy remains debated in cultural history and media studies.
 </div>
 </section>
 
 <!-- RUBRIC -->
 <section id="rubric">
-<h2>Rubric Analyzer</h2>
+<h2>Rubric Analysis</h2>
 
 <button onclick="toggle('c1')">Cause & Effect</button>
 <button onclick="toggle('c2')">Comparison</button>
-<button onclick="toggle('c3')">AP World</button>
+<button onclick="toggle('c3')">AP World Connection</button>
 
 <div id="c1" class="card hidden">
-Strict upbringing + Motown → global pop transformation
+CAUSE: strict upbringing + Motown system + media expansion  
+EFFECT: global pop dominance + MTV revolution + music video culture
 </div>
 
 <div id="c2" class="card hidden">
-Elvis = rock globalization  
-MJ = performance + visual globalization
+Comparison: Elvis Presley vs Michael Jackson  
+Elvis → rock globalization  
+MJ → performance + dance + visual media globalization
 </div>
 
 <div id="c3" class="card hidden">
-Globalization through media diffusion systems
+AP World Theme: Globalization  
+MJ represents cultural diffusion through mass media networks.
 </div>
-</section>
 
-<!-- WORLD MAP -->
-<section id="map">
-<h2>World Influence</h2>
-<div class="map">
-<div class="dot" data="USA influence core"></div>
-<div class="dot" data="Europe stadium tours"></div>
-<div class="dot" data="Asia massive fandom"></div>
-</div>
 </section>
 
 <script>
-// fade-in sections
-const sections=document.querySelectorAll("section");
-const obs=new IntersectionObserver(e=>{
-e.forEach(x=>{
-if(x.isIntersecting){x.target.classList.add("visible");}
-});
-},{threshold:0.2});
-
-sections.forEach(s=>obs.observe(s));
-
-// rubric toggle
 function toggle(id){
 document.getElementById(id).classList.toggle("hidden");
 }

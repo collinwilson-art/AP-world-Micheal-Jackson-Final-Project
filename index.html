@@ -1,10 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Michael Jackson: The King of Pop</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#0f0f0f;
+    color:white;
+    text-align:center;
+}
+
+header{
+    background:linear-gradient(to right,#111,#333);
+    padding:40px 20px;
+    border-bottom:3px solid gold;
+}
+
+header h1{
+    color:gold;
+    font-size:48px;
+    margin-bottom:10px;
+}
+
+header p{
+    color:#ccc;
+    font-size:18px;
+}
+
+section{
+    max-width:1300px;
+    margin:auto;
+    padding:50px 20px;
+}
+
+h2{
+    color:gold;
+    margin-bottom:30px;
+    font-size:34px;
+}
+
+/* ================= ALBUM GRID ================= */
+
+.album-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+    justify-items:center;
+}
+
+.bubble{
+    width:240px;
+    background:#1b1b1b;
+    border:2px solid gold;
+    border-radius:12px;
+    padding:10px;
+    transition:.3s;
+    cursor:pointer;
+}
+
+.bubble:hover{
+    transform:scale(1.03);
+    background:#222;
+}
+
+.album-title{
+    color:gold;
+    font-size:18px;
+    margin-bottom:10px;
+    font-weight:bold;
+}
+
+.album-cover{
+    width:120px;
+    height:120px;
+    object-fit:cover;
+    border-radius:10px;
+    border:2px solid #444;
+    margin-bottom:10px;
+}
+
+.album-content{
+    display:none;
+    text-align:left;
+    margin-top:10px;
+    border-top:1px solid #444;
+    padding-top:10px;
+    font-size:13px;
+}
+
+.album-content ul{
+    padding-left:20px;
+}
+
+.info-box{
+    background:#1b1b1b;
+    border:2px solid gold;
+    border-radius:15px;
+    padding:25px;
+    margin-bottom:35px;
+    text-align:left;
+}
+
+.info-box h3{
+    color:gold;
+    margin-top:0;
+}
+
+footer{
+    padding:20px;
+    color:#888;
+}
+
+@media(max-width:1100px){
+    .album-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:700px){
+    .album-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Michael Jackson: The King of Pop</h1>
+    <p>Origins • Albums • Performances • Conspiracies • Impact • Legacy</p>
+</header>
+
+<!-- ================= ALBUMS ================= -->
+
+<section>
+
+<h2>1. Albums</h2>
+
+<div class="album-grid">
+
 <!-- BEN -->
 <div class="bubble" onclick="toggle(this)">
 <div class="album-title">Ben (1972)</div>
 <img class="album-cover" src="Ben MJ.jpg">
+
 <div class="album-content">
-<p><b>Background:</b> Early Motown solo album tied to the film Ben.</p>
-<p><b>Reason:</b> Motown promoted Michael as a child solo artist.</p>
+
+<p><b>Background:</b> Michael’s second solo album during his Motown years.</p>
+
+<p><b>Reason for Creation:</b> Motown wanted to establish Michael as a successful solo child artist outside The Jackson 5.</p>
+
 <ul>
 <li>Ben</li>
 <li>Greatest Show on Earth</li>
@@ -16,8 +168,8 @@
 <li>In Our Small Way</li>
 <li>Shoo-Be-Doo-Be-Doo-Da-Day</li>
 <li>You Can Cry on My Shoulder</li>
-<li>Ain't No Sunshine</li>
 </ul>
+
 </div>
 </div>
 
@@ -25,9 +177,13 @@
 <div class="bubble" onclick="toggle(this)">
 <div class="album-title">Off the Wall (1979)</div>
 <img class="album-cover" src="off the wall MJ.webp">
+
 <div class="album-content">
-<p><b>Background:</b> Michael broke away from the Motown formula and collaborated with Quincy Jones to create a mature disco/funk sound.</p>
-<p><b>Reason:</b> Establish himself as an adult solo artist with complete musical identity.</p>
+
+<p><b>Background:</b> Michael collaborated with Quincy Jones and transitioned into a mature disco/funk artist.</p>
+
+<p><b>Reason for Creation:</b> Michael wanted creative freedom and to prove himself as an adult artist.</p>
+
 <ul>
 <li>Don't Stop 'Til You Get Enough</li>
 <li>Rock with You</li>
@@ -40,6 +196,7 @@
 <li>It's the Falling in Love</li>
 <li>Burn This Disco Out</li>
 </ul>
+
 </div>
 </div>
 
@@ -47,9 +204,13 @@
 <div class="bubble" onclick="toggle(this)">
 <div class="album-title">Thriller (1982)</div>
 <img class="album-cover" src="Michael_Jackson_-_Thriller.png">
+
 <div class="album-content">
-<p><b>Background:</b> Designed to become the greatest crossover pop album ever made.</p>
-<p><b>Reason:</b> Michael wanted every song to feel like a hit single.</p>
+
+<p><b>Background:</b> Thriller became the best-selling album in history and revolutionized music videos.</p>
+
+<p><b>Reason for Creation:</b> Michael wanted every track to sound like a hit single.</p>
+
 <ul>
 <li>Wanna Be Startin' Somethin'</li>
 <li>Baby Be Mine</li>
@@ -61,6 +222,7 @@
 <li>P.Y.T. (Pretty Young Thing)</li>
 <li>The Lady in My Life</li>
 </ul>
+
 </div>
 </div>
 
@@ -68,9 +230,13 @@
 <div class="bubble" onclick="toggle(this)">
 <div class="album-title">Bad (1987)</div>
 <img class="album-cover" src="MJ.jpeg">
+
 <div class="album-content">
-<p><b>Background:</b> Michael’s first era with nearly complete creative control.</p>
-<p><b>Reason:</b> Prove he could surpass the success of Thriller.</p>
+
+<p><b>Background:</b> Michael gained greater creative control and darker themes.</p>
+
+<p><b>Reason for Creation:</b> He wanted to prove he could follow the success of Thriller.</p>
+
 <ul>
 <li>Bad</li>
 <li>The Way You Make Me Feel</li>
@@ -84,6 +250,7 @@
 <li>Smooth Criminal</li>
 <li>Leave Me Alone</li>
 </ul>
+
 </div>
 </div>
 
@@ -91,9 +258,13 @@
 <div class="bubble" onclick="toggle(this)">
 <div class="album-title">Dangerous (1991)</div>
 <img class="album-cover" src="Dangerous MJ.jpg">
+
 <div class="album-content">
-<p><b>Background:</b> Michael embraced New Jack Swing and darker themes.</p>
-<p><b>Reason:</b> Reinvent his sound for the 1990s.</p>
+
+<p><b>Background:</b> Michael embraced New Jack Swing and socially conscious themes.</p>
+
+<p><b>Reason for Creation:</b> Reinvent his sound for the 1990s.</p>
+
 <ul>
 <li>Jam</li>
 <li>Why You Wanna Trip on Me</li>
@@ -110,6 +281,7 @@
 <li>Gone Too Soon</li>
 <li>Dangerous</li>
 </ul>
+
 </div>
 </div>
 
@@ -117,9 +289,13 @@
 <div class="bubble" onclick="toggle(this)">
 <div class="album-title">HIStory (1995)</div>
 <img class="album-cover" src="HIStory MJ.jpg">
+
 <div class="album-content">
-<p><b>Background:</b> Emotional response to public criticism and media attacks.</p>
-<p><b>Reason:</b> Defend his reputation and express frustration.</p>
+
+<p><b>Background:</b> Created during heavy media scrutiny and controversy.</p>
+
+<p><b>Reason for Creation:</b> Michael wanted to defend his reputation and express frustration.</p>
+
 <ul>
 <li>Scream</li>
 <li>They Don't Care About Us</li>
@@ -137,6 +313,7 @@
 <li>Little Susie / Pie Jesu</li>
 <li>Smile</li>
 </ul>
+
 </div>
 </div>
 
@@ -144,9 +321,13 @@
 <div class="bubble" onclick="toggle(this)">
 <div class="album-title">Invincible (2001)</div>
 <img class="album-cover" src="invincible Mj.jpg">
+
 <div class="album-content">
+
 <p><b>Background:</b> Michael’s final studio album with futuristic R&B production.</p>
-<p><b>Reason:</b> Re-enter modern pop and R&B dominance.</p>
+
+<p><b>Reason for Creation:</b> Re-enter the modern music scene and innovate again.</p>
+
 <ul>
 <li>Unbreakable</li>
 <li>Heartbreaker</li>
@@ -165,6 +346,7 @@
 <li>Whatever Happens</li>
 <li>Threatened</li>
 </ul>
+
 </div>
 </div>
 
@@ -172,9 +354,13 @@
 <div class="bubble" onclick="toggle(this)">
 <div class="album-title">Xscape (2014)</div>
 <img class="album-cover" src="Xscape MJ.jpg">
+
 <div class="album-content">
-<p><b>Background:</b> Posthumous album featuring newly produced unreleased songs.</p>
-<p><b>Reason:</b> Introduce archived Michael Jackson vocals to a modern audience.</p>
+
+<p><b>Background:</b> Posthumous album using unreleased Michael Jackson vocals.</p>
+
+<p><b>Reason for Creation:</b> Introduce classic Michael recordings to a modern audience.</p>
+
 <ul>
 <li>Love Never Felt So Good</li>
 <li>Chicago</li>
@@ -185,5 +371,185 @@
 <li>Blue Gangsta</li>
 <li>Xscape</li>
 </ul>
+
 </div>
 </div>
+
+</div>
+
+</section>
+
+<!-- ================= ORIGINS ================= -->
+
+<section>
+
+<h2>2. Origins & The Jackson 5</h2>
+
+<div class="info-box">
+
+<h3>Origins</h3>
+
+<p>
+Michael Jackson was born in Gary, Indiana in 1958 and rose to fame through The Jackson 5 alongside his brothers. 
+The group was formed by their father Joe Jackson, who recognized the musical talents of his children early on.
+Michael quickly became the lead singer due to his incredible voice, charisma, and dancing abilities.
+</p>
+
+<h3>Cause & Effect</h3>
+
+<p>
+Strict rehearsals and constant performing shaped Michael into an elite entertainer at a very young age.
+This caused him to develop perfectionist tendencies that later defined his solo career.
+</p>
+
+<h3>Key Catalyst Moments</h3>
+
+<ul>
+<li>Joining Motown Records in 1969</li>
+<li>Releasing Off the Wall in 1979</li>
+<li>Performing the Moonwalk in 1983</li>
+</ul>
+
+</div>
+
+</section>
+
+<!-- ================= PERFORMANCES ================= -->
+
+<section>
+
+<h2>3. Famous Performances</h2>
+
+<div class="info-box">
+
+<h3>Motown 25 Performance</h3>
+
+<p>
+In 1983, Michael debuted the moonwalk during Billie Jean at Motown 25. This became one of the most iconic moments in entertainment history.
+</p>
+
+<h3>Super Bowl XXVII</h3>
+
+<p>
+Michael’s 1993 Super Bowl halftime performance changed halftime shows forever and proved music performances could become the main attraction.
+</p>
+
+<h3>Impact</h3>
+
+<p>
+His performances influenced artists such as Beyoncé, Usher, Chris Brown, and Bruno Mars.
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= CONSPIRACY ================= -->
+
+<section>
+
+<h2>4. Conspiracy Theories & Media</h2>
+
+<div class="info-box">
+
+<p>
+Because of his enormous fame, Michael Jackson became the subject of countless conspiracy theories and tabloid stories.
+Many rumors focused on his appearance, personal life, and health.
+</p>
+
+<p>
+Michael actually suffered from vitiligo, a skin condition that changes skin pigmentation, but tabloids often ignored this reality.
+</p>
+
+<p>
+This section demonstrates how media sensationalism can shape public perception of celebrities.
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= IMPACT ================= -->
+
+<section>
+
+<h2>5. Global & Personal Impact</h2>
+
+<div class="info-box">
+
+<h3>Global Impact</h3>
+
+<p>
+Michael Jackson transformed music videos, dance, fashion, and pop culture worldwide.
+He broke racial barriers on MTV and became one of the first truly global entertainers.
+</p>
+
+<h3>Personal Impact</h3>
+
+<p>
+Michael inspired millions of people through music, dance, and humanitarian work.
+</p>
+
+<h3>How To Convince Someone It Matters</h3>
+
+<p>
+Without Michael Jackson, modern pop music, music videos, and stadium performances would look completely different today.
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= AP WORLD ================= -->
+
+<section>
+
+<h2>6. Historical Thinking Skills & AP World Connections</h2>
+
+<div class="info-box">
+
+<h3>Cause & Effect</h3>
+
+<p>
+The rise of television and MTV helped Michael become a global superstar, while his fame also increased media scrutiny.
+</p>
+
+<h3>Comparison</h3>
+
+<p>
+Michael Jackson can be compared to Elvis Presley because both transformed music and became worldwide cultural icons.
+</p>
+
+<h3>AP World Connection</h3>
+
+<p>
+Michael Jackson connects to globalization because his music spread across cultures and countries worldwide.
+His influence demonstrates how media and entertainment shape global culture.
+</p>
+
+</div>
+
+</section>
+
+<footer>
+<p>Michael Jackson Cultural History Project</p>
+</footer>
+
+<script>
+
+function toggle(el){
+
+    let content = el.querySelector(".album-content");
+
+    if(content.style.display === "block"){
+        content.style.display = "none";
+    } else {
+        content.style.display = "block";
+    }
+
+}
+
+</script>
+
+</body>
+</html>

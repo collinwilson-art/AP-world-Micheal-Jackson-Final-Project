@@ -2,53 +2,98 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Michael Jackson: History, Legacy, and Cultural Impact</title>
+<title>Michael Jackson Cultural History Website</title>
 
 <style>
     body {
-        font-family: Arial, sans-serif;
         margin: 0;
-        line-height: 1.6;
+        font-family: Arial, sans-serif;
         background: #0f0f0f;
         color: #f2f2f2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     header {
-        background: linear-gradient(90deg, #111, #333);
-        padding: 30px;
+        width: 100%;
         text-align: center;
+        padding: 40px 20px;
+        background: linear-gradient(90deg, #111, #333);
         border-bottom: 3px solid gold;
     }
 
     header h1 {
-        margin: 0;
         color: gold;
-        font-size: 36px;
+        margin: 0;
+        font-size: 40px;
+    }
+
+    header p {
+        color: #ccc;
     }
 
     section {
-        padding: 40px;
-        border-bottom: 1px solid #333;
+        width: 100%;
+        max-width: 1000px;
+        padding: 40px 20px;
+        text-align: center;
     }
 
     h2 {
         color: gold;
+        margin-bottom: 20px;
     }
 
-    h3 {
-        color: #ffcc66;
+    .bubble {
+        background: #1b1b1b;
+        border: 2px solid gold;
+        border-radius: 15px;
+        margin: 15px auto;
+        padding: 20px;
+        width: 90%;
+        cursor: pointer;
+        transition: 0.3s;
     }
 
-    .highlight {
-        color: gold;
+    .bubble:hover {
+        transform: scale(1.02);
+        background: #222;
+    }
+
+    .album-title {
+        font-size: 22px;
         font-weight: bold;
+        color: gold;
+        margin-bottom: 10px;
+    }
+
+    .album-cover {
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 10px;
+        border: 2px solid #444;
+        margin: 10px auto;
+        display: block;
+    }
+
+    .album-content {
+        display: none;
+        margin-top: 15px;
+        text-align: left;
+        border-top: 1px solid #444;
+        padding-top: 15px;
+    }
+
+    ul {
+        text-align: left;
     }
 
     footer {
-        text-align: center;
         padding: 20px;
-        background: #111;
-        color: #888;
+        color: #777;
+        text-align: center;
     }
 </style>
 </head>
@@ -56,241 +101,146 @@
 <body>
 
 <header>
-    <h1>Michael Jackson: The King of Pop and Cultural Revolution</h1>
-    <p>A deep historical analysis of music, influence, and global impact</p>
+    <h1>Michael Jackson: The King of Pop</h1>
+    <p>History • Albums • Performances • Impact • Legacy</p>
 </header>
 
-<!-- SECTION 1 -->
+<!-- ================= 1. ALBUMS ================= -->
 <section>
-<h2>1. Origins: The Jackson 5 & Early Life</h2>
+<h2>1. Albums (Click to Expand)</h2>
 
-<p>
-Michael Jackson began his journey in Gary, Indiana, where he joined his family group, 
-<span class="highlight">The Jackson 5</span>. The group, led by his father Joe Jackson, became a Motown sensation.
-</p>
+<div class="bubble" onclick="toggle(this)">
+    <div class="album-title">Off the Wall (1979)</div>
+    <img class="album-cover" src="https://upload.wikimedia.org/wikipedia/en/4/4b/Michael_Jackson_-_Off_the_Wall.png">
+    <div class="album-content">
+        <p><b>Background:</b> First major solo breakthrough with Quincy Jones.</p>
+        <p><b>Reason:</b> Break away from Motown and define adult artistry.</p>
+        <ul>
+            <li>Don’t Stop ’Til You Get Enough</li>
+            <li>Rock With You</li>
+            <li>Working Day and Night</li>
+            <li>She’s Out of My Life</li>
+        </ul>
+    </div>
+</div>
 
-<h3>Origins → Where/how did it start?</h3>
-<p>
-The Jackson 5 started as a local talent act performing in small venues before signing with Motown Records in 1968.
-Michael quickly became the standout performer due to his vocal maturity and stage presence.
-</p>
+<div class="bubble" onclick="toggle(this)">
+    <div class="album-title">Thriller (1982)</div>
+    <img class="album-cover" src="https://upload.wikimedia.org/wikipedia/en/5/55/Michael_Jackson_-_Thriller.png">
+    <div class="album-content">
+        <p><b>Background:</b> Designed as a perfect global pop crossover album.</p>
+        <p><b>Reason:</b> Create a flawless, no-skip record.</p>
+        <ul>
+            <li>Thriller</li>
+            <li>Billie Jean</li>
+            <li>Beat It</li>
+            <li>Human Nature</li>
+            <li>P.Y.T.</li>
+        </ul>
+    </div>
+</div>
 
-<h3>Key Moments of Change</h3>
-<ul>
-<li>1964: Michael joins The Jackson Brothers at age 6</li>
-<li>1968: The Jackson 5 sign with Motown Records</li>
-<li>1969: “I Want You Back” becomes a #1 hit</li>
-</ul>
+<div class="bubble" onclick="toggle(this)">
+    <div class="album-title">Bad (1987)</div>
+    <img class="album-cover" src="https://upload.wikimedia.org/wikipedia/en/5/51/Michael_Jackson_-_Bad.png">
+    <div class="album-content">
+        <p><b>Background:</b> Full creative control for the first time.</p>
+        <p><b>Reason:</b> Prove he could follow Thriller successfully.</p>
+        <ul>
+            <li>Bad</li>
+            <li>The Way You Make Me Feel</li>
+            <li>Man in the Mirror</li>
+            <li>Smooth Criminal</li>
+            <li>Dirty Diana</li>
+        </ul>
+    </div>
+</div>
 
-<h3>Impact</h3>
-<p>
-Globally, The Jackson 5 broke racial barriers in the music industry. Personally, Michael’s childhood was shaped by intense discipline and performance pressure.
-</p>
+<div class="bubble" onclick="toggle(this)">
+    <div class="album-title">Dangerous (1991)</div>
+    <img class="album-cover" src="https://upload.wikimedia.org/wikipedia/en/5/5c/Michael_Jackson_-_Dangerous.png">
+    <div class="album-content">
+        <p><b>Background:</b> Shift to New Jack Swing and modern production.</p>
+        <p><b>Reason:</b> Reinvent sound for a new generation.</p>
+        <ul>
+            <li>Black or White</li>
+            <li>Remember the Time</li>
+            <li>Jam</li>
+            <li>Heal the World</li>
+        </ul>
+    </div>
+</div>
 
-<h3>Cause & Effect</h3>
-<p>
-Strict training and early exposure to fame caused rapid artistic development, but also led to long-term pressure in his solo career.
-</p>
+<div class="bubble" onclick="toggle(this)">
+    <div class="album-title">HIStory (1995)</div>
+    <img class="album-cover" src="https://upload.wikimedia.org/wikipedia/en/2/22/Michael_Jackson_-_HIStory.jpg">
+    <div class="album-content">
+        <p><b>Background:</b> Response to media criticism and public scrutiny.</p>
+        <p><b>Reason:</b> Defend legacy and express frustration with fame.</p>
+        <ul>
+            <li>Scream</li>
+            <li>They Don’t Care About Us</li>
+            <li>Earth Song</li>
+            <li>You Are Not Alone</li>
+        </ul>
+    </div>
+</div>
 
 </section>
 
-<!-- SECTION 2 -->
+<!-- ================= 2. JACKSON 5 ================= -->
 <section>
-<h2>2. Solo Career & Albums Evolution</h2>
-
-<h3>Origins → Solo Breakthrough</h3>
+<h2>2. Origins: The Jackson 5</h2>
 <p>
-Michael transitioned from group performer to solo artist with <span class="highlight">Off the Wall (1979)</span>.
+Michael Jackson began his career with :contentReference[oaicite:0]{index=0} in Gary, Indiana.
+He became lead singer due to his exceptional vocal ability and stage presence.
 </p>
-
-<h3>Major Albums</h3>
-<ul>
-<li><b>Off the Wall (1979)</b> → Disco, funk, early solo identity</li>
-<li><b>Thriller (1982)</b> → Best-selling album of all time</li>
-<li><b>Bad (1987)</b> → More aggressive sound and image</li>
-<li><b>Dangerous (1991)</b> → New Jack Swing influence</li>
-<li><b>HIStory (1995)</b> → Reflection on fame and controversy</li>
-</ul>
-
-<h3>Change Over Time (Key Moments)</h3>
-<ul>
-<li>1979: Establishes independence from Motown sound</li>
-<li>1982: Thriller transforms global pop music and music videos</li>
-<li>1991: Dangerous introduces social commentary themes</li>
-</ul>
-
-<h3>Impact</h3>
-<p>
-Globally, Michael redefined the music industry through album sales, MTV dominance, and touring culture.
-Personally, he became increasingly isolated due to fame.
-</p>
-
-<h3>AP World Connection</h3>
-<p>
-His global reach reflects modern globalization—media, technology (MTV), and capitalism spreading culture worldwide.
-</p>
-
 </section>
 
-<!-- SECTION 3 -->
+<!-- ================= 3. PERFORMANCES ================= -->
 <section>
-<h2>3. Iconic Performances: Super Bowl & Moonwalk Era</h2>
-
-<h3>Origins → Performance Style</h3>
+<h2>3. Iconic Performances</h2>
 <p>
-Michael Jackson revolutionized live performance with theatrical storytelling, precision choreography, and cinematic staging.
+He revolutionized live performance with the moonwalk debut in 1983 (“Billie Jean”) and massive global events like the Super Bowl XXVII halftime show.
 </p>
-
-<h3>Key Performances</h3>
-<ul>
-<li>1983: “Billie Jean” performance (first televised moonwalk)</li>
-<li>1988: Bad World Tour global stadium shows</li>
-<li>1993: Super Bowl XXVII halftime show (massive global TV audience)</li>
-</ul>
-
-<h3>Change Over Time</h3>
-<ul>
-<li>Early performances: Motown-style choreography</li>
-<li>1980s: Introduction of solo storytelling performances</li>
-<li>1990s: Stadium-scale global productions</li>
-</ul>
-
-<h3>Cause & Effect</h3>
-<p>
-The rise of MTV caused artists to prioritize visual performance, and Michael became the standard for music videos and live shows.
-</p>
-
-<h3>Comparison</h3>
-<p>
-Compared to Elvis Presley, Michael Jackson emphasized dance and visual storytelling more than vocal performance alone.
-</p>
-
-<h3>Impact</h3>
-<p>
-His Super Bowl performance set the standard for halftime shows, turning them into global entertainment events.
-</p>
-
 </section>
 
-<!-- SECTION 4 -->
+<!-- ================= 4. CONSPIRACIES ================= -->
 <section>
-<h2>4. Conspiracy Theories & Media Scrutiny</h2>
-
-<h3>Origins → Why they started</h3>
+<h2>4. Media & Conspiracy Theories</h2>
 <p>
-Conspiracy theories about Michael Jackson emerged due to extreme fame, media sensationalism, and public misunderstanding of his personal life.
+Due to extreme fame and media attention, many rumors and conspiracy theories formed around his appearance, lifestyle, and personal life.
 </p>
-
-<h3>Common Theories (Presented neutrally)</h3>
-<ul>
-<li>Speculation about his appearance changes</li>
-<li>Claims of media manipulation</li>
-<li>Rumors about his personal behavior (widely debated in media)</li>
-</ul>
-
-<h3>Change Over Time</h3>
-<ul>
-<li>1980s: Focus on plastic surgery rumors</li>
-<li>1990s: Increased tabloid coverage and legal controversies</li>
-<li>2000s: Internet amplifies misinformation and speculation</li>
-</ul>
-
-<h3>Impact</h3>
-<p>
-Globally, these narratives shaped public perception. Personally, they contributed to isolation and stress.
-</p>
-
-<h3>Cause & Effect</h3>
-<p>
-Media sensationalism → public speculation → intensified scrutiny → distorted legacy discussions.
-</p>
-
-<h3>AP World Connection</h3>
-<p>
-This reflects the “information age,” where media globalization spreads both truth and misinformation rapidly.
-</p>
-
 </section>
 
-<!-- SECTION 5 -->
+<!-- ================= 5. IMPACT ================= -->
 <section>
-<h2>5. Impact, Importance, and Historical Thinking Skills</h2>
-
-<h3>Why It Matters Globally</h3>
+<h2>5. Impact & Importance</h2>
 <p>
-Michael Jackson influenced music, fashion, dance, and global media consumption. He helped unify global pop culture.
+Michael Jackson reshaped global pop culture through music, dance, fashion, and music video storytelling.
+His influence is still seen in modern artists worldwide.
 </p>
-
-<h3>Why It Matters Personally</h3>
-<p>
-His music continues to inspire artists, dancers, and fans worldwide, shaping identity and creativity.
-</p>
-
-<h3>How to Convince Someone</h3>
-<p>
-Even if someone dislikes pop music, Michael Jackson’s innovations in video production, choreography, and global entertainment are unavoidable in modern media.
-</p>
-
-<h3>Cause & Effect</h3>
-<p>
-Technological growth (TV + MTV) → rise of global pop stars → Michael becomes worldwide cultural icon.
-</p>
-
-<h3>Comparison</h3>
-<p>
-Compared to modern artists like Beyoncé or Justin Timberlake, Michael set foundational standards for performance-driven pop music.
-</p>
-
-<h3>AP World Connection</h3>
-<p>
-Theme: <b>Globalization and Cultural Exchange</b> — his music spread across continents, blending styles and breaking cultural barriers.
-</p>
-
 </section>
 
-<!-- SECTION 6 -->
+<!-- ================= 6. CHANGE OVER TIME ================= -->
 <section>
-<h2>6. Change Over Time: Evolution of a Global Icon</h2>
-
-<h3>Origins</h3>
+<h2>6. Change Over Time</h2>
 <p>
-Started as a child performer in The Jackson 5, rooted in Motown soul and R&B traditions.
+He evolved from child star → global pop icon → controversial media figure → lasting cultural legend.
+Key turning points: Thriller (1982), Bad (1987), Dangerous (1991).
 </p>
-
-<h3>3 Key Catalysts for Change</h3>
-<ul>
-<li><b>1979 – Off the Wall:</b> transition to independent artist</li>
-<li><b>1982 – Thriller:</b> global superstardom and music video revolution</li>
-<li><b>1983 – Moonwalk debut:</b> redefining live performance forever</li>
-</ul>
-
-<h3>Later Evolution</h3>
-<p>
-Michael evolved from pop star → global cultural symbol → controversial media figure → enduring legacy icon.
-</p>
-
-<h3>Impact Summary</h3>
-<ul>
-<li><b>Global:</b> reshaped entertainment industry worldwide</li>
-<li><b>Personal:</b> extreme fame shaped isolated lifestyle</li>
-<li><b>Legacy:</b> continues influencing modern music and performance art</li>
-</ul>
-
-<h3>Cause & Effect</h3>
-<p>
-Innovation in music + media exposure → global fame → increased scrutiny → complex legacy.
-</p>
-
-<h3>Comparison</h3>
-<p>
-Similar to Beethoven in classical music, Michael Jackson redefined the standards of his artistic field.
-</p>
-
 </section>
 
 <footer>
-    <p>Website Project: Michael Jackson Historical Analysis | King of Pop Legacy Study</p>
+<p>Michael Jackson Cultural History Project</p>
 </footer>
+
+<script>
+function toggle(el) {
+    let content = el.querySelector(".album-content");
+    content.style.display = (content.style.display === "block") ? "none" : "block";
+}
+</script>
 
 </body>
 </html>

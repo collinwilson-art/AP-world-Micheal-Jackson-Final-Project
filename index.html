@@ -44,8 +44,6 @@ h2{
     font-size:34px;
 }
 
-/* ================= ALBUM GRID ================= */
-
 .album-grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
@@ -108,7 +106,6 @@ h2{
 
 .info-box h3{
     color:gold;
-    margin-top:0;
 }
 
 footer{
@@ -134,9 +131,11 @@ footer{
 <body>
 
 <header>
-    <h1>Michael Jackson: The King of Pop</h1>
-    <p>Origins • Albums • Performances • Conspiracies • Impact • Legacy</p>
+<h1>Michael Jackson: The King of Pop</h1>
+<p>Origins • Albums • Performances • Conspiracies • Impact • Legacy</p>
 </header>
+
+<!-- ================= ALBUMS ================= -->
 
 <section>
 
@@ -151,7 +150,6 @@ footer{
 
 <div class="album-content">
 <p><b>Background:</b> Michael’s second solo album during his Motown years.</p>
-<p><b>Reason for Creation:</b> Motown wanted to establish Michael as a successful solo child artist outside The Jackson 5.</p>
 
 <ul>
 <li>Ben</li>
@@ -174,8 +172,7 @@ footer{
 <img class="album-cover" src="./Off the Wall MJ.webp">
 
 <div class="album-content">
-<p><b>Background:</b> Michael collaborated with Quincy Jones and transitioned into a mature disco/funk artist.</p>
-<p><b>Reason for Creation:</b> Michael wanted creative freedom and to prove himself as an adult artist.</p>
+<p><b>Background:</b> Michael became an adult superstar through disco/funk music.</p>
 
 <ul>
 <li>Don't Stop 'Til You Get Enough</li>
@@ -198,9 +195,6 @@ footer{
 <img class="album-cover" src="./Michael_Jackson_-_Thriller.png">
 
 <div class="album-content">
-<p><b>Background:</b> Thriller became the best-selling album in history.</p>
-<p><b>Reason for Creation:</b> Michael wanted every song to feel like a hit single.</p>
-
 <ul>
 <li>Wanna Be Startin' Somethin'</li>
 <li>Baby Be Mine</li>
@@ -221,9 +215,6 @@ footer{
 <img class="album-cover" src="./MJ.jpeg">
 
 <div class="album-content">
-<p><b>Background:</b> Michael gained greater creative control and darker themes.</p>
-<p><b>Reason for Creation:</b> He wanted to prove he could follow Thriller.</p>
-
 <ul>
 <li>Bad</li>
 <li>The Way You Make Me Feel</li>
@@ -246,8 +237,6 @@ footer{
 <img class="album-cover" src="./Dangerous MJ.jpg">
 
 <div class="album-content">
-<p><b>Background:</b> Michael embraced New Jack Swing and socially conscious themes.</p>
-
 <ul>
 <li>Jam</li>
 <li>Why You Wanna Trip on Me</li>
@@ -343,16 +332,155 @@ footer{
 
 </section>
 
-<script>
-function toggle(el){
-    let content = el.querySelector(".album-content");
+<!-- ================= ORIGINS ================= -->
 
-    if(content.style.display === "block"){
-        content.style.display = "none";
-    } else {
-        content.style.display = "block";
-    }
+<section>
+
+<h2>2. Origins & The Jackson 5</h2>
+
+<div class="info-box">
+
+<h3>Origins</h3>
+
+<p>
+Michael Jackson was born in Gary, Indiana in 1958 and became famous as the lead singer of The Jackson 5.
+His father Joe Jackson pushed the group through intense rehearsals and performances.
+The Jackson 5 signed with Motown Records in 1969 and quickly became one of the most successful groups in America.
+</p>
+
+<h3>Key Catalyst Moments</h3>
+
+<ul>
+<li>Signing with Motown Records (1969)</li>
+<li>Releasing Off the Wall (1979)</li>
+<li>Debuting the Moonwalk at Motown 25 (1983)</li>
+</ul>
+
+</div>
+
+</section>
+
+<!-- ================= PERFORMANCES ================= -->
+
+<section>
+
+<h2>3. Famous Performances</h2>
+
+<div class="info-box">
+
+<h3>Motown 25</h3>
+
+<p>
+Michael Jackson introduced the moonwalk while performing Billie Jean in 1983.
+This became one of the most iconic dance moments in entertainment history.
+</p>
+
+<h3>Super Bowl XXVII</h3>
+
+<p>
+Michael’s 1993 halftime performance changed the future of Super Bowl entertainment forever.
+Modern halftime shows became massive global productions because of him.
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= CONSPIRACIES ================= -->
+
+<section>
+
+<h2>4. Conspiracy Theories & Media</h2>
+
+<div class="info-box">
+
+<p>
+Because of his worldwide fame, Michael Jackson became the center of many conspiracy theories and tabloid rumors.
+Many stories focused on his appearance, surgeries, skin condition, and private life.
+</p>
+
+<p>
+Michael publicly revealed he had vitiligo, a condition that changes skin pigmentation, though many tabloids ignored this fact.
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= IMPACT ================= -->
+
+<section>
+
+<h2>5. Global & Personal Impact</h2>
+
+<div class="info-box">
+
+<h3>Global Impact</h3>
+
+<p>
+Michael Jackson transformed music videos, dance, fashion, and pop culture worldwide.
+He helped break racial barriers on MTV and influenced artists across every genre.
+</p>
+
+<h3>Personally</h3>
+
+<p>
+Michael inspired millions through music, dance, creativity, and humanitarian work.
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= AP WORLD ================= -->
+
+<section>
+
+<h2>6. Historical Thinking Skills & AP World Connections</h2>
+
+<div class="info-box">
+
+<h3>Cause & Effect</h3>
+
+<p>
+Television and MTV helped Michael become a global superstar, while media attention also created intense public scrutiny.
+</p>
+
+<h3>Comparison</h3>
+
+<p>
+Michael Jackson can be compared to Elvis Presley because both became worldwide cultural icons who transformed music.
+</p>
+
+<h3>AP World Connection</h3>
+
+<p>
+Michael Jackson connects to globalization because his music and performances spread across cultures around the world.
+</p>
+
+</div>
+
+</section>
+
+<footer>
+<p>Michael Jackson Cultural History Project</p>
+</footer>
+
+<script>
+
+function toggle(el){
+
+let content = el.querySelector(".album-content");
+
+if(content.style.display === "block"){
+content.style.display = "none";
 }
+else{
+content.style.display = "block";
+}
+
+}
+
 </script>
 
 </body>

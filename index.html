@@ -35,7 +35,7 @@
 
     section {
         width: 100%;
-        max-width: 1000px;
+        max-width: 1100px;
         padding: 40px 20px;
         text-align: center;
     }
@@ -45,48 +45,66 @@
         margin-bottom: 20px;
     }
 
+    /* ===== ALBUM GRID ===== */
+    .album-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+        justify-items: center;
+        align-items: start;
+    }
+
+    .album-row-single {
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    /* ===== SMALL BUBBLES ===== */
     .bubble {
         background: #1b1b1b;
         border: 2px solid gold;
-        border-radius: 15px;
-        margin: 15px auto;
-        padding: 20px;
-        width: 90%;
+        border-radius: 12px;
+        padding: 10px;
+        width: 230px;
         cursor: pointer;
         transition: 0.3s;
+        text-align: center;
     }
 
     .bubble:hover {
-        transform: scale(1.02);
+        transform: scale(1.03);
         background: #222;
     }
 
     .album-title {
-        font-size: 22px;
+        font-size: 16px;
         font-weight: bold;
         color: gold;
-        margin-bottom: 10px;
+        margin-bottom: 8px;
     }
 
     .album-cover {
-        width: 180px;
-        height: 180px;
+        width: 140px;
+        height: 140px;
         object-fit: cover;
         border-radius: 10px;
         border: 2px solid #444;
-        margin: 10px auto;
+        margin: 8px auto;
         display: block;
     }
 
     .album-content {
         display: none;
-        margin-top: 15px;
+        margin-top: 10px;
         text-align: left;
         border-top: 1px solid #444;
-        padding-top: 15px;
+        padding-top: 10px;
+        font-size: 13px;
     }
 
     ul {
+        padding-left: 18px;
         text-align: left;
     }
 
@@ -102,133 +120,178 @@
 
 <header>
     <h1>Michael Jackson: The King of Pop</h1>
-    <p>History • Albums • Performances • Impact • Legacy</p>
+    <p>Albums • History • Performances • Cultural Impact</p>
 </header>
 
-<!-- ================= 1. ALBUMS ================= -->
+<!-- ================= ALBUMS ================= -->
 <section>
-<h2>1. Albums (Click to Expand)</h2>
+<h2>1. Albums (Chronological Order)</h2>
 
-<div class="bubble" onclick="toggle(this)">
-    <div class="album-title">Off the Wall (1979)</div>
-    <img class="album-cover" src="https://upload.wikimedia.org/wikipedia/en/4/4b/Michael_Jackson_-_Off_the_Wall.png">
-    <div class="album-content">
-        <p><b>Background:</b> First major solo breakthrough with Quincy Jones.</p>
-        <p><b>Reason:</b> Break away from Motown and define adult artistry.</p>
-        <ul>
-            <li>Don’t Stop ’Til You Get Enough</li>
-            <li>Rock With You</li>
-            <li>Working Day and Night</li>
-            <li>She’s Out of My Life</li>
-        </ul>
+<div class="album-grid">
+
+    <!-- 1 GOT TO BE THERE -->
+    <div class="bubble" onclick="toggle(this)">
+        <div class="album-title">Got to Be There (1972)</div>
+        <img class="album-cover" src="https://upload.wikimedia.org/wikipedia/en/6/60/Got_to_Be_There_album_cover.jpg">
+        <div class="album-content">
+            <p><b>Background:</b> Michael’s debut solo album while still in The Jackson 5.</p>
+            <p><b>Reason:</b> Motown launched him as a solo child prodigy.</p>
+            <ul>
+                <li>Got to Be There</li>
+                <li>Rockin’ Robin</li>
+                <li>Ben</li>
+            </ul>
+        </div>
     </div>
+
+    <!-- 2 BEN -->
+    <div class="bubble" onclick="toggle(this)">
+        <div class="album-title">Ben (1972)</div>
+        <img class="album-cover" src="https://upload.wikimedia.org/wikipedia/en/1/14/Michael_Jackson_-_Ben_album_cover.jpg">
+        <div class="album-content">
+            <p><b>Background:</b> Emotional early solo work tied to the film "Ben".</p>
+            <p><b>Reason:</b> Show emotional depth as a young artist.</p>
+            <ul>
+                <li>Ben</li>
+                <li>Greatest Show on Earth</li>
+                <li>People Make the World Go Round</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 3 OFF THE WALL -->
+    <div class="bubble" onclick="toggle(this)">
+        <div class="album-title">Off the Wall (1979)</div>
+        <img class="album-cover" src="https://upload.wikimedia.org/wikipedia/en/4/4b/Michael_Jackson_-_Off_the_Wall.png">
+        <div class="album-content">
+            <p><b>Background:</b> Break from Motown sound with Quincy Jones.</p>
+            <p><b>Reason:</b> Establish adult artistic identity.</p>
+            <ul>
+                <li>Don’t Stop ’Til You Get Enough</li>
+                <li>Rock With You</li>
+                <li>She’s Out of My Life</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 4 THRILLER -->
+    <div class="bubble" onclick="toggle(this)">
+        <div class="album-title">Thriller (1982)</div>
+        <img class="album-cover" src="https://upload.wikimedia.org/wikipedia/en/5/55/Michael_Jackson_-_Thriller.png">
+        <div class="album-content">
+            <p><b>Background:</b> Global crossover pop masterpiece.</p>
+            <p><b>Reason:</b> Create a perfect no-skip album.</p>
+            <ul>
+                <li>Thriller</li>
+                <li>Billie Jean</li>
+                <li>Beat It</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 5 BAD -->
+    <div class="bubble" onclick="toggle(this)">
+        <div class="album-title">Bad (1987)</div>
+        <img class="album-cover" src="https://upload.wikimedia.org/wikipedia/en/5/51/Michael_Jackson_-_Bad.png">
+        <div class="album-content">
+            <p><b>Background:</b> First fully self-controlled project.</p>
+            <p><b>Reason:</b> Prove dominance after Thriller.</p>
+            <ul>
+                <li>Bad</li>
+                <li>Smooth Criminal</li>
+                <li>Man in the Mirror</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 6 DANGEROUS -->
+    <div class="bubble" onclick="toggle(this)">
+        <div class="album-title">Dangerous (1991)</div>
+        <img class="album-cover" src="https://upload.wikimedia.org/wikipedia/en/5/5c/Michael_Jackson_-_Dangerous.png">
+        <div class="album-content">
+            <p><b>Background:</b> New Jack Swing era innovation.</p>
+            <p><b>Reason:</b> Reinvent sound for new decade.</p>
+            <ul>
+                <li>Black or White</li>
+                <li>Remember the Time</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 7 HISTORY -->
+    <div class="bubble" onclick="toggle(this)">
+        <div class="album-title">HIStory (1995)</div>
+        <img class="album-cover" src="https://upload.wikimedia.org/wikipedia/en/2/22/Michael_Jackson_-_HIStory.jpg">
+        <div class="album-content">
+            <p><b>Background:</b> Response to media pressure.</p>
+            <p><b>Reason:</b> Defend legacy and express emotion.</p>
+            <ul>
+                <li>Earth Song</li>
+                <li>Scream</li>
+                <li>They Don’t Care About Us</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 8 INVINCIBLE -->
+    <div class="bubble" onclick="toggle(this)">
+        <div class="album-title">Invincible (2001)</div>
+        <img class="album-cover" src="https://upload.wikimedia.org/wikipedia/en/2/22/Michael_Jackson_-_Invincible.png">
+        <div class="album-content">
+            <p><b>Background:</b> Final major studio album.</p>
+            <p><b>Reason:</b> Modern R&B comeback attempt.</p>
+            <ul>
+                <li>Butterflies</li>
+                <li>You Rock My World</li>
+                <li>Break of Dawn</li>
+            </ul>
+        </div>
+    </div>
+
 </div>
 
-<div class="bubble" onclick="toggle(this)">
-    <div class="album-title">Thriller (1982)</div>
-    <img class="album-cover" src="https://upload.wikimedia.org/wikipedia/en/5/55/Michael_Jackson_-_Thriller.png">
-    <div class="album-content">
-        <p><b>Background:</b> Designed as a perfect global pop crossover album.</p>
-        <p><b>Reason:</b> Create a flawless, no-skip record.</p>
-        <ul>
-            <li>Thriller</li>
-            <li>Billie Jean</li>
-            <li>Beat It</li>
-            <li>Human Nature</li>
-            <li>P.Y.T.</li>
-        </ul>
-    </div>
-</div>
-
-<div class="bubble" onclick="toggle(this)">
-    <div class="album-title">Bad (1987)</div>
-    <img class="album-cover" src="https://upload.wikimedia.org/wikipedia/en/5/51/Michael_Jackson_-_Bad.png">
-    <div class="album-content">
-        <p><b>Background:</b> Full creative control for the first time.</p>
-        <p><b>Reason:</b> Prove he could follow Thriller successfully.</p>
-        <ul>
-            <li>Bad</li>
-            <li>The Way You Make Me Feel</li>
-            <li>Man in the Mirror</li>
-            <li>Smooth Criminal</li>
-            <li>Dirty Diana</li>
-        </ul>
-    </div>
-</div>
-
-<div class="bubble" onclick="toggle(this)">
-    <div class="album-title">Dangerous (1991)</div>
-    <img class="album-cover" src="https://upload.wikimedia.org/wikipedia/en/5/5c/Michael_Jackson_-_Dangerous.png">
-    <div class="album-content">
-        <p><b>Background:</b> Shift to New Jack Swing and modern production.</p>
-        <p><b>Reason:</b> Reinvent sound for a new generation.</p>
-        <ul>
-            <li>Black or White</li>
-            <li>Remember the Time</li>
-            <li>Jam</li>
-            <li>Heal the World</li>
-        </ul>
-    </div>
-</div>
-
-<div class="bubble" onclick="toggle(this)">
-    <div class="album-title">HIStory (1995)</div>
-    <img class="album-cover" src="https://upload.wikimedia.org/wikipedia/en/2/22/Michael_Jackson_-_HIStory.jpg">
-    <div class="album-content">
-        <p><b>Background:</b> Response to media criticism and public scrutiny.</p>
-        <p><b>Reason:</b> Defend legacy and express frustration with fame.</p>
-        <ul>
-            <li>Scream</li>
-            <li>They Don’t Care About Us</li>
-            <li>Earth Song</li>
-            <li>You Are Not Alone</li>
-        </ul>
+<!-- 9 XSCAPE (CENTERED ROW) -->
+<div class="album-row-single">
+    <div class="bubble" onclick="toggle(this)">
+        <div class="album-title">Xscape (2014)</div>
+        <img class="album-cover" src="https://upload.wikimedia.org/wikipedia/en/9/93/Michael_Jackson_Xscape_album_cover.jpg">
+        <div class="album-content">
+            <p><b>Background:</b> Posthumous release of unreleased material.</p>
+            <p><b>Reason:</b> Modern production of archived songs.</p>
+            <ul>
+                <li>Xscape</li>
+                <li>Love Never Felt So Good</li>
+            </ul>
+        </div>
     </div>
 </div>
 
 </section>
 
-<!-- ================= 2. JACKSON 5 ================= -->
+<!-- ================= OTHER SECTIONS ================= -->
 <section>
-<h2>2. Origins: The Jackson 5</h2>
-<p>
-Michael Jackson began his career with :contentReference[oaicite:0]{index=0} in Gary, Indiana.
-He became lead singer due to his exceptional vocal ability and stage presence.
-</p>
+<h2>2. Origins (Jackson 5)</h2>
+<p>Started with The Jackson 5, becoming lead vocalist due to exceptional talent and stage presence.</p>
 </section>
 
-<!-- ================= 3. PERFORMANCES ================= -->
 <section>
 <h2>3. Iconic Performances</h2>
-<p>
-He revolutionized live performance with the moonwalk debut in 1983 (“Billie Jean”) and massive global events like the Super Bowl XXVII halftime show.
-</p>
+<p>Moonwalk debut (1983), Super Bowl XXVII, and global stadium tours changed live entertainment forever.</p>
 </section>
 
-<!-- ================= 4. CONSPIRACIES ================= -->
 <section>
 <h2>4. Media & Conspiracy Theories</h2>
-<p>
-Due to extreme fame and media attention, many rumors and conspiracy theories formed around his appearance, lifestyle, and personal life.
-</p>
+<p>Fame led to intense speculation and media-driven narratives around his life.</p>
 </section>
 
-<!-- ================= 5. IMPACT ================= -->
 <section>
-<h2>5. Impact & Importance</h2>
-<p>
-Michael Jackson reshaped global pop culture through music, dance, fashion, and music video storytelling.
-His influence is still seen in modern artists worldwide.
-</p>
+<h2>5. Impact</h2>
+<p>He reshaped global music, dance, fashion, and modern entertainment industries.</p>
 </section>
 
-<!-- ================= 6. CHANGE OVER TIME ================= -->
 <section>
 <h2>6. Change Over Time</h2>
-<p>
-He evolved from child star → global pop icon → controversial media figure → lasting cultural legend.
-Key turning points: Thriller (1982), Bad (1987), Dangerous (1991).
-</p>
+<p>Child star → global icon → controversial figure → permanent cultural legend.</p>
 </section>
 
 <footer>

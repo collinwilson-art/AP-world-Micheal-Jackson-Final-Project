@@ -1,131 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Michael Jackson Cultural History Website</title>
-
-<style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background: #0f0f0f;
-        color: #f2f2f2;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    header {
-        width: 100%;
-        text-align: center;
-        padding: 40px 20px;
-        background: linear-gradient(90deg, #111, #333);
-        border-bottom: 3px solid gold;
-    }
-
-    header h1 {
-        color: gold;
-        margin: 0;
-        font-size: 40px;
-    }
-
-    header p {
-        color: #ccc;
-    }
-
-    section {
-        width: 100%;
-        max-width: 1200px;
-        padding: 40px 20px;
-        text-align: center;
-    }
-
-    h2 {
-        color: gold;
-        margin-bottom: 20px;
-    }
-
-    .album-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 12px;
-        justify-items: center;
-    }
-
-    .bubble {
-        background: #1b1b1b;
-        border: 2px solid gold;
-        border-radius: 10px;
-        padding: 8px;
-        width: 250px;
-        cursor: pointer;
-        transition: 0.3s;
-        text-align: center;
-    }
-
-    .bubble:hover {
-        transform: scale(1.03);
-        background: #222;
-    }
-
-    .album-title {
-        font-size: 15px;
-        font-weight: bold;
-        color: gold;
-        margin-bottom: 6px;
-    }
-
-    .album-cover {
-        width: 120px;
-        height: 120px;
-        object-fit: cover;
-        border-radius: 8px;
-        border: 2px solid #444;
-        margin: 6px auto;
-        display: block;
-    }
-
-    .album-content {
-        display: none;
-        margin-top: 8px;
-        text-align: left;
-        border-top: 1px solid #444;
-        padding-top: 8px;
-        font-size: 12px;
-    }
-
-    ul {
-        padding-left: 18px;
-    }
-
-    footer {
-        padding: 20px;
-        color: #777;
-        text-align: center;
-    }
-</style>
-</head>
-
-<body>
-
-<header>
-    <h1>Michael Jackson: The King of Pop</h1>
-    <p>Albums • Origins • Performances • Impact • Legacy</p>
-</header>
-
-<!-- ================= ALBUMS ================= -->
-<section>
-<h2>1. Albums (Chronological Order)</h2>
-
-<div class="album-grid">
-
 <!-- BEN -->
 <div class="bubble" onclick="toggle(this)">
 <div class="album-title">Ben (1972)</div>
 <img class="album-cover" src="Ben MJ.jpg">
 <div class="album-content">
 <p><b>Background:</b> Early Motown solo album tied to the film Ben.</p>
-<p><b>Reason:</b> Motown promoted him as a child solo star.</p>
+<p><b>Reason:</b> Motown promoted Michael as a child solo artist.</p>
 <ul>
 <li>Ben</li>
 <li>Greatest Show on Earth</li>
@@ -133,6 +12,10 @@
 <li>We've Got a Good Thing Going</li>
 <li>Everybody's Somebody's Fool</li>
 <li>My Girl</li>
+<li>What Goes Around Comes Around</li>
+<li>In Our Small Way</li>
+<li>Shoo-Be-Doo-Be-Doo-Da-Day</li>
+<li>You Can Cry on My Shoulder</li>
 <li>Ain't No Sunshine</li>
 </ul>
 </div>
@@ -141,20 +24,21 @@
 <!-- OFF THE WALL -->
 <div class="bubble" onclick="toggle(this)">
 <div class="album-title">Off the Wall (1979)</div>
-<img class="album-cover" src="Off the Wall MJ.jpg">
+<img class="album-cover" src="off the wall MJ.webp">
 <div class="album-content">
-<p><b>Background:</b> Break from Motown with Quincy Jones.</p>
-<p><b>Reason:</b> Establish adult artistic identity.</p>
+<p><b>Background:</b> Michael broke away from the Motown formula and collaborated with Quincy Jones to create a mature disco/funk sound.</p>
+<p><b>Reason:</b> Establish himself as an adult solo artist with complete musical identity.</p>
 <ul>
 <li>Don't Stop 'Til You Get Enough</li>
-<li>Rock With You</li>
+<li>Rock with You</li>
 <li>Workin' Day and Night</li>
+<li>Get on the Floor</li>
 <li>Off the Wall</li>
-<li>She's Out of My Life</li>
-<li>Burn This Disco Out</li>
 <li>Girlfriend</li>
+<li>She's Out of My Life</li>
 <li>I Can't Help It</li>
 <li>It's the Falling in Love</li>
+<li>Burn This Disco Out</li>
 </ul>
 </div>
 </div>
@@ -162,18 +46,20 @@
 <!-- THRILLER -->
 <div class="bubble" onclick="toggle(this)">
 <div class="album-title">Thriller (1982)</div>
-<img class="album-cover" src="Thriller MJ.jpg">
+<img class="album-cover" src="Michael_Jackson_-_Thriller.png">
 <div class="album-content">
-<p><b>Background:</b> Global pop breakthrough album.</p>
-<p><b>Reason:</b> Create perfect no-skip record.</p>
+<p><b>Background:</b> Designed to become the greatest crossover pop album ever made.</p>
+<p><b>Reason:</b> Michael wanted every song to feel like a hit single.</p>
 <ul>
 <li>Wanna Be Startin' Somethin'</li>
+<li>Baby Be Mine</li>
+<li>The Girl Is Mine</li>
 <li>Thriller</li>
 <li>Beat It</li>
 <li>Billie Jean</li>
 <li>Human Nature</li>
-<li>P.Y.T.</li>
-<li>The Girl Is Mine</li>
+<li>P.Y.T. (Pretty Young Thing)</li>
+<li>The Lady in My Life</li>
 </ul>
 </div>
 </div>
@@ -181,16 +67,22 @@
 <!-- BAD -->
 <div class="bubble" onclick="toggle(this)">
 <div class="album-title">Bad (1987)</div>
-<img class="album-cover" src="Bad MJ.jpg">
+<img class="album-cover" src="MJ.jpeg">
 <div class="album-content">
-<p><b>Background:</b> First fully self-produced era.</p>
-<p><b>Reason:</b> Prove success after Thriller.</p>
+<p><b>Background:</b> Michael’s first era with nearly complete creative control.</p>
+<p><b>Reason:</b> Prove he could surpass the success of Thriller.</p>
 <ul>
 <li>Bad</li>
-<li>Smooth Criminal</li>
-<li>Man in the Mirror</li>
-<li>Dirty Diana</li>
 <li>The Way You Make Me Feel</li>
+<li>Speed Demon</li>
+<li>Liberian Girl</li>
+<li>Just Good Friends</li>
+<li>Another Part of Me</li>
+<li>Man in the Mirror</li>
+<li>I Just Can't Stop Loving You</li>
+<li>Dirty Diana</li>
+<li>Smooth Criminal</li>
+<li>Leave Me Alone</li>
 </ul>
 </div>
 </div>
@@ -200,15 +92,23 @@
 <div class="album-title">Dangerous (1991)</div>
 <img class="album-cover" src="Dangerous MJ.jpg">
 <div class="album-content">
-<p><b>Background:</b> New Jack Swing era shift.</p>
-<p><b>Reason:</b> Reinvent sound for new decade.</p>
+<p><b>Background:</b> Michael embraced New Jack Swing and darker themes.</p>
+<p><b>Reason:</b> Reinvent his sound for the 1990s.</p>
 <ul>
-<li>Black or White</li>
-<li>Remember the Time</li>
 <li>Jam</li>
-<li>Heal the World</li>
+<li>Why You Wanna Trip on Me</li>
 <li>In the Closet</li>
+<li>She Drives Me Wild</li>
+<li>Remember the Time</li>
+<li>Can't Let Her Get Away</li>
+<li>Heal the World</li>
+<li>Black or White</li>
+<li>Who Is It</li>
+<li>Give In to Me</li>
 <li>Will You Be There</li>
+<li>Keep the Faith</li>
+<li>Gone Too Soon</li>
+<li>Dangerous</li>
 </ul>
 </div>
 </div>
@@ -218,14 +118,24 @@
 <div class="album-title">HIStory (1995)</div>
 <img class="album-cover" src="HIStory MJ.jpg">
 <div class="album-content">
-<p><b>Background:</b> Response to media pressure.</p>
-<p><b>Reason:</b> Defend personal legacy.</p>
+<p><b>Background:</b> Emotional response to public criticism and media attacks.</p>
+<p><b>Reason:</b> Defend his reputation and express frustration.</p>
 <ul>
 <li>Scream</li>
 <li>They Don't Care About Us</li>
-<li>Earth Song</li>
-<li>You Are Not Alone</li>
 <li>Stranger in Moscow</li>
+<li>This Time Around</li>
+<li>Earth Song</li>
+<li>D.S.</li>
+<li>Money</li>
+<li>Come Together</li>
+<li>You Are Not Alone</li>
+<li>Childhood</li>
+<li>Tabloid Junkie</li>
+<li>2 Bad</li>
+<li>HIStory</li>
+<li>Little Susie / Pie Jesu</li>
+<li>Smile</li>
 </ul>
 </div>
 </div>
@@ -233,16 +143,27 @@
 <!-- INVINCIBLE -->
 <div class="bubble" onclick="toggle(this)">
 <div class="album-title">Invincible (2001)</div>
-<img class="album-cover" src="Invincible MJ.jpg">
+<img class="album-cover" src="invincible Mj.jpg">
 <div class="album-content">
-<p><b>Background:</b> Final studio album.</p>
-<p><b>Reason:</b> Modern R&B sound direction.</p>
+<p><b>Background:</b> Michael’s final studio album with futuristic R&B production.</p>
+<p><b>Reason:</b> Re-enter modern pop and R&B dominance.</p>
 <ul>
-<li>You Rock My World</li>
-<li>Butterflies</li>
+<li>Unbreakable</li>
+<li>Heartbreaker</li>
+<li>Invincible</li>
 <li>Break of Dawn</li>
 <li>Heaven Can Wait</li>
+<li>You Rock My World</li>
+<li>Butterflies</li>
 <li>Speechless</li>
+<li>2000 Watts</li>
+<li>You Are My Life</li>
+<li>Privacy</li>
+<li>Don't Walk Away</li>
+<li>Cry</li>
+<li>The Lost Children</li>
+<li>Whatever Happens</li>
+<li>Threatened</li>
 </ul>
 </div>
 </div>
@@ -252,57 +173,17 @@
 <div class="album-title">Xscape (2014)</div>
 <img class="album-cover" src="Xscape MJ.jpg">
 <div class="album-content">
-<p><b>Background:</b> Posthumous release.</p>
-<p><b>Reason:</b> Modern production of unreleased songs.</p>
+<p><b>Background:</b> Posthumous album featuring newly produced unreleased songs.</p>
+<p><b>Reason:</b> Introduce archived Michael Jackson vocals to a modern audience.</p>
 <ul>
 <li>Love Never Felt So Good</li>
 <li>Chicago</li>
-<li>Xscape</li>
+<li>Loving You</li>
+<li>A Place with No Name</li>
 <li>Slave to the Rhythm</li>
+<li>Do You Know Where Your Children Are</li>
+<li>Blue Gangsta</li>
+<li>Xscape</li>
 </ul>
 </div>
 </div>
-
-</div>
-</section>
-
-<!-- OTHER SECTIONS -->
-<section>
-<h2>2. Origins (Jackson 5)</h2>
-<p>Michael rose to fame with The Jackson 5, becoming lead vocalist due to exceptional talent and stage presence.</p>
-</section>
-
-<section>
-<h2>3. Iconic Performances</h2>
-<p>Moonwalk debut (1983), Super Bowl XXVII, and global tours revolutionized live performance.</p>
-</section>
-
-<section>
-<h2>4. Conspiracy Theories</h2>
-<p>Extreme fame led to widespread media speculation and misinformation.</p>
-</section>
-
-<section>
-<h2>5. Impact</h2>
-<p>Michael Jackson reshaped global music, dance, fashion, and entertainment industries.</p>
-</section>
-
-<section>
-<h2>6. Change Over Time</h2>
-<p>Child star → global icon → controversial figure → cultural legend.</p>
-</section>
-
-<footer>
-<p>Michael Jackson Cultural History Project</p>
-</footer>
-
-<script>
-function toggle(el) {
-    let content = el.querySelector(".album-content");
-    content.style.display =
-        (content.style.display === "block") ? "none" : "block";
-}
-</script>
-
-</body>
-</html>

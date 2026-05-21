@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Michael Jackson: History, Music & Legacy</title>
+  <title>Michael Jackson | History, Albums & Legacy</title>
 
-  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <style>
+
     *{
       margin:0;
       padding:0;
@@ -26,7 +26,7 @@
     header{
       height:100vh;
       background:
-      linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.8)),
+      linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.85)),
       url('https://upload.wikimedia.org/wikipedia/commons/5/51/Michael_Jackson_in_1988.jpg');
       background-size:cover;
       background-position:center;
@@ -39,23 +39,23 @@
     }
 
     header h1{
-      font-size:4rem;
+      font-size:5rem;
       color:#ffd700;
-      text-shadow:2px 2px 10px black;
+      text-shadow:2px 2px 20px black;
     }
 
     header p{
-      max-width:800px;
+      max-width:900px;
       margin-top:20px;
-      font-size:1.2rem;
+      font-size:1.3rem;
     }
 
     nav{
       position:sticky;
       top:0;
-      background:#000;
-      z-index:1000;
+      background:black;
       padding:15px;
+      z-index:1000;
       text-align:center;
       border-bottom:2px solid #ffd700;
     }
@@ -78,8 +78,9 @@
 
     h2{
       color:#ffd700;
-      margin-bottom:20px;
-      font-size:2.5rem;
+      margin-bottom:30px;
+      font-size:2.7rem;
+      text-align:center;
     }
 
     .card{
@@ -90,23 +91,69 @@
       box-shadow:0 0 15px rgba(255,215,0,.2);
     }
 
-    .timeline{
-      border-left:4px solid #ffd700;
-      padding-left:20px;
-      margin-top:30px;
+    .album-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
+      gap:20px;
     }
 
-    .timeline-item{
-      margin-bottom:30px;
+    .album{
+      background:#222;
+      padding:20px;
+      border-radius:15px;
+      transition:.3s;
+      text-align:center;
     }
 
-    .timeline-item h3{
+    .album:hover{
+      transform:translateY(-5px);
+      box-shadow:0 0 20px rgba(255,215,0,.4);
+    }
+
+    .album img{
+      width:100%;
+      border-radius:10px;
+      margin-top:15px;
+    }
+
+    details{
+      margin-top:20px;
+      background:#1c1c1c;
+      padding:20px;
+      border-radius:15px;
+    }
+
+    summary{
+      font-size:1.3rem;
+      cursor:pointer;
       color:#ffd700;
+      font-weight:bold;
+    }
+
+    details img{
+      width:250px;
+      margin-top:20px;
+      border-radius:10px;
     }
 
     ul{
+      margin-top:20px;
       margin-left:20px;
-      margin-top:10px;
+    }
+
+    .timeline{
+      border-left:4px solid #ffd700;
+      padding-left:25px;
+    }
+
+    .timeline-item{
+      margin-bottom:50px;
+    }
+
+    .timeline-item img{
+      width:300px;
+      border-radius:10px;
+      margin:15px 0;
     }
 
     footer{
@@ -116,320 +163,469 @@
       border-top:2px solid #ffd700;
     }
 
-    .highlight{
-      color:#ffd700;
-      font-weight:bold;
-    }
-
-    .album-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
-      gap:20px;
-      margin-top:30px;
-    }
-
-    .album{
-      background:#222;
-      padding:20px;
-      border-radius:10px;
-      transition:.3s;
-    }
-
-    .album:hover{
-      transform:translateY(-5px);
-      box-shadow:0 0 15px rgba(255,215,0,.4);
-    }
-
-    .album h3{
-      color:#ffd700;
-    }
-
     @media(max-width:768px){
+
       header h1{
-        font-size:2.5rem;
+        font-size:3rem;
       }
 
       nav a{
         display:block;
         margin:10px 0;
       }
+
+      .timeline-item img{
+        width:100%;
+      }
+
     }
+
   </style>
 </head>
 
 <body>
 
-  <header>
-    <h1>Michael Jackson</h1>
+<header>
+
+  <h1>Michael Jackson</h1>
+
+  <p>
+    The King of Pop changed music, dance, entertainment, and global culture forever.
+    This website explores Michael Jackson’s history, albums, conspiracy theories,
+    historical impact, and legacy.
+  </p>
+
+</header>
+
+<nav>
+
+  <a href="#history">History</a>
+  <a href="#topsongs">Top Songs</a>
+  <a href="#albums">Albums</a>
+  <a href="#timeline">Timeline</a>
+  <a href="#death">Death</a>
+  <a href="#controversy">Controversies</a>
+  <a href="#analysis">Historical Analysis</a>
+
+</nav>
+
+<section id="history">
+
+  <h2>History of Michael Jackson</h2>
+
+  <div class="card">
+
     <p>
-      The King of Pop changed music, dance, fashion, and entertainment forever.
-      This website explores his life, albums, conspiracy theories, global impact,
-      and historical significance.
+      Michael Jackson was born on August 29, 1958, in Gary, Indiana.
+      He became famous as the lead singer of The Jackson 5 alongside his brothers.
     </p>
-  </header>
 
-  <nav>
-    <a href="#history">History</a>
-    <a href="#albums">Albums</a>
-    <a href="#conspiracies">Conspiracies</a>
-    <a href="#change">Change Over Time</a>
-    <a href="#impact">Impact</a>
-    <a href="#analysis">Historical Thinking Skills</a>
-  </nav>
+    <br>
 
-  <!-- HISTORY -->
-  <section id="history">
-    <h2>History of Michael Jackson</h2>
-
-    <div class="card">
-      <p>
-        Michael Jackson was born on August 29, 1958, in Gary, Indiana.
-        He first became famous as a child in <span class="highlight">The Jackson 5</span>,
-        a Motown music group formed with his brothers.
-      </p>
-
-      <p>
-        By the late 1970s and 1980s, Michael Jackson became one of the
-        most famous entertainers in history. His music videos, dancing,
-        and live performances revolutionized pop culture worldwide.
-      </p>
-
-      <p>
-        He earned the nickname <span class="highlight">"The King of Pop"</span>
-        because of his unmatched influence on music and entertainment.
-      </p>
-    </div>
-  </section>
-
-  <!-- ALBUMS -->
-  <section id="albums">
-    <h2>Michael Jackson Albums</h2>
-
-    <div class="album-grid">
-
-      <div class="album">
-        <h3>Got to Be There (1972)</h3>
-        <p>Michael’s first solo album while still in The Jackson 5.</p>
-      </div>
-
-      <div class="album">
-        <h3>Ben (1972)</h3>
-        <p>Included the hit song "Ben."</p>
-      </div>
-
-      <div class="album">
-        <h3>Music & Me (1973)</h3>
-        <p>Focused on Michael’s vocal talents as a teenager.</p>
-      </div>
-
-      <div class="album">
-        <h3>Forever, Michael (1975)</h3>
-        <p>Transitioned toward a more mature sound.</p>
-      </div>
-
-      <div class="album">
-        <h3>Off the Wall (1979)</h3>
-        <p>Produced by Quincy Jones; became a huge success.</p>
-      </div>
-
-      <div class="album">
-        <h3>Thriller (1982)</h3>
-        <p>The best-selling album of all time.</p>
-      </div>
-
-      <div class="album">
-        <h3>Bad (1987)</h3>
-        <p>Included hits like "Smooth Criminal" and "Man in the Mirror."</p>
-      </div>
-
-      <div class="album">
-        <h3>Dangerous (1991)</h3>
-        <p>Featured songs such as "Black or White."</p>
-      </div>
-
-      <div class="album">
-        <h3>HIStory (1995)</h3>
-        <p>Combined greatest hits with new music.</p>
-      </div>
-
-      <div class="album">
-        <h3>Invincible (2001)</h3>
-        <p>Michael’s final studio album released during his lifetime.</p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- CONSPIRACIES -->
-  <section id="conspiracies">
-    <h2>Conspiracy Theories & Origins</h2>
-
-    <div class="card">
-      <h3>1. “Michael Jackson Faked His Death”</h3>
-      <p>
-        After Michael Jackson died in 2009, many conspiracy theories spread online.
-        Some people believed he faked his death to escape fame and media pressure.
-      </p>
-
-      <p>
-        This theory started because fans claimed to see “clues” in videos,
-        interviews, and funeral footage.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>2. Skin Color Change Theories</h3>
-      <p>
-        Many people believed Michael intentionally changed his skin color.
-        However, Michael explained publicly that he had
-        <span class="highlight">vitiligo</span>, a skin condition that causes
-        loss of pigmentation.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>3. Music Industry Conspiracies</h3>
-      <p>
-        Some theories claimed powerful music executives tried to control
-        or silence Michael because of disputes over music ownership and contracts.
-      </p>
-    </div>
-  </section>
-
-  <!-- CHANGE OVER TIME -->
-  <section id="change">
-    <h2>Change Over Time</h2>
-
-    <div class="timeline">
-
-      <div class="timeline-item">
-        <h3>Key Moment #1 — Joining The Jackson 5 (1960s)</h3>
-        <p>
-          Michael’s career began as a child performer.
-          This launched him into worldwide fame and changed
-          him from a normal child into a global celebrity.
-        </p>
-      </div>
-
-      <div class="timeline-item">
-        <h3>Key Moment #2 — Release of Thriller (1982)</h3>
-        <p>
-          Thriller transformed the music industry forever.
-          Music videos became more cinematic, and MTV began
-          playing more Black artists because of Michael’s popularity.
-        </p>
-      </div>
-
-      <div class="timeline-item">
-        <h3>Key Moment #3 — Legal Controversies (1990s-2000s)</h3>
-        <p>
-          Allegations and court cases changed public opinion about Michael Jackson.
-          Media coverage shifted attention from his music to his personal life.
-        </p>
-      </div>
-
-      <div class="timeline-item">
-        <h3>Key Moment #4 — Death in 2009</h3>
-        <p>
-          After his death, Michael’s music sales exploded again,
-          and a new generation discovered his influence.
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- IMPACT -->
-  <section id="impact">
-    <h2>Impact</h2>
-
-    <div class="card">
-      <h3>Global Impact</h3>
-      <p>
-        Michael Jackson influenced music, dance, fashion,
-        and entertainment all over the world.
-        Artists today still copy his dance moves, music videos,
-        and performance style.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Personal Impact</h3>
-      <p>
-        Michael Jackson inspired millions of people through his music,
-        creativity, and messages about peace, unity, and helping others.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Why It Matters</h3>
-      <p>
-        Michael Jackson matters because he changed the entertainment industry forever.
-        Without him, modern music videos, pop performances,
-        and global celebrity culture would look very different today.
-      </p>
-    </div>
-  </section>
-
-  <!-- HISTORICAL THINKING -->
-  <section id="analysis">
-    <h2>Historical Thinking Skills</h2>
-
-    <div class="card">
-      <h3>Cause & Effect</h3>
-
-      <p>
-        Michael Jackson’s success was caused by his talent,
-        hard work, and innovations in music videos and dance.
-      </p>
-
-      <p>
-        The effects included:
-      </p>
-
-      <ul>
-        <li>Growth of MTV and music videos</li>
-        <li>Worldwide influence on pop music</li>
-        <li>Changes in celebrity culture</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h3>Comparison</h3>
-
-      <p>
-        Michael Jackson can be compared to modern artists like
-        Beyoncé or Taylor Swift because they also have worldwide influence.
-        However, Michael changed the music industry on a larger scale
-        during the rise of television and global media.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>AP World Connection</h3>
-
-      <p>
-        Michael Jackson connects to themes of:
-      </p>
-
-      <ul>
-        <li>Globalization</li>
-        <li>Cultural diffusion</li>
-        <li>Technology and media</li>
-      </ul>
-
-      <p>
-        His music spread across the world through television,
-        radio, and the internet, showing how culture can become global.
-      </p>
-    </div>
-  </section>
-
-  <footer>
     <p>
-      Website Created for Educational Purposes | Michael Jackson History Project
+      During the 1980s and 1990s, Michael Jackson became the most famous entertainer in the world.
+      His music videos, dance moves, live performances, and fashion changed the entertainment industry forever.
     </p>
-  </footer>
+
+    <br>
+
+    <p>
+      Michael earned the nickname <strong>"The King of Pop"</strong>
+      because of his massive worldwide influence.
+    </p>
+
+  </div>
+
+</section>
+
+<section id="topsongs">
+
+  <h2>Top 5 Michael Jackson Songs</h2>
+
+  <div class="album-grid">
+
+    <div class="album">
+      <h3>1. Billie Jean</h3>
+      <p>One of the most iconic songs ever created.</p>
+    </div>
+
+    <div class="album">
+      <h3>2. Thriller</h3>
+      <p>Known for the greatest music video in history.</p>
+    </div>
+
+    <div class="album">
+      <h3>3. Beat It</h3>
+      <p>A revolutionary mix of pop and rock music.</p>
+    </div>
+
+    <div class="album">
+      <h3>4. Smooth Criminal</h3>
+      <p>Famous for the anti-gravity lean dance move.</p>
+    </div>
+
+    <div class="album">
+      <h3>5. Man in the Mirror</h3>
+      <p>A song about helping others and changing the world.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<section id="albums">
+
+  <h2>Michael Jackson Albums</h2>
+
+  <details>
+    <summary>Got to Be There (1972)</summary>
+
+    <img src="https://upload.wikimedia.org/wikipedia/en/0/0d/Got_to_be_there.jpg">
+
+    <ul>
+      <li>Ain't No Sunshine</li>
+      <li>I Wanna Be Where You Are</li>
+      <li>Rockin' Robin</li>
+      <li>Maria (You Were the Only One)</li>
+      <li>Love Is Here and Now You're Gone</li>
+      <li>You've Got a Friend</li>
+      <li>Girl Don't Take Your Love from Me</li>
+      <li>In Our Small Way</li>
+      <li>Got to Be There</li>
+      <li>Wings of My Love</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>Ben (1972)</summary>
+
+    <img src="https://upload.wikimedia.org/wikipedia/en/f/fc/Michael_Jackson_-_Ben.jpg">
+
+    <ul>
+      <li>Ben</li>
+      <li>People Make the World Go Round</li>
+      <li>Everybody's Somebody's Fool</li>
+      <li>My Girl</li>
+      <li>What Goes Around Comes Around</li>
+      <li>In Our Small Way</li>
+      <li>Shoo-Be-Doo-Be-Doo-Da-Day</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>Music & Me (1973)</summary>
+
+    <img src="https://upload.wikimedia.org/wikipedia/en/5/55/Musicandme.jpg">
+
+    <ul>
+      <li>With a Child's Heart</li>
+      <li>Up Again</li>
+      <li>All the Things You Are</li>
+      <li>Music and Me</li>
+      <li>Happy</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>Forever, Michael (1975)</summary>
+
+    <img src="https://upload.wikimedia.org/wikipedia/en/8/84/Forevermichael.jpg">
+
+    <ul>
+      <li>We're Almost There</li>
+      <li>Take Me Back</li>
+      <li>One Day in Your Life</li>
+      <li>Cinderella Stay Awhile</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>Off the Wall (1979)</summary>
+
+    <img src="https://upload.wikimedia.org/wikipedia/en/5/55/Michael_Jackson_-_Off_the_Wall.png">
+
+    <ul>
+      <li>Don't Stop 'Til You Get Enough</li>
+      <li>Rock with You</li>
+      <li>Working Day and Night</li>
+      <li>Get on the Floor</li>
+      <li>Off the Wall</li>
+      <li>Girlfriend</li>
+      <li>She's Out of My Life</li>
+      <li>I Can't Help It</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>Thriller (1982)</summary>
+
+    <img src="https://upload.wikimedia.org/wikipedia/en/5/55/Michael_Jackson_-_Thriller.png">
+
+    <ul>
+      <li>Wanna Be Startin' Somethin'</li>
+      <li>Baby Be Mine</li>
+      <li>The Girl Is Mine</li>
+      <li>Thriller</li>
+      <li>Beat It</li>
+      <li>Billie Jean</li>
+      <li>Human Nature</li>
+      <li>P.Y.T.</li>
+      <li>The Lady in My Life</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>Bad (1987)</summary>
+
+    <img src="https://upload.wikimedia.org/wikipedia/en/5/51/Michael_Jackson_-_Bad.png">
+
+    <ul>
+      <li>Bad</li>
+      <li>The Way You Make Me Feel</li>
+      <li>Speed Demon</li>
+      <li>Liberian Girl</li>
+      <li>Just Good Friends</li>
+      <li>Man in the Mirror</li>
+      <li>Dirty Diana</li>
+      <li>Smooth Criminal</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>Dangerous (1991)</summary>
+
+    <img src="https://upload.wikimedia.org/wikipedia/en/0/0d/Michael_Jackson_-_Dangerous.png">
+
+    <ul>
+      <li>Jam</li>
+      <li>Why You Wanna Trip on Me</li>
+      <li>Black or White</li>
+      <li>Remember the Time</li>
+      <li>Heal the World</li>
+      <li>Who Is It</li>
+      <li>Dangerous</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>HIStory (1995)</summary>
+
+    <img src="https://upload.wikimedia.org/wikipedia/en/c/c1/Michael_Jackson_-_HIStory.jpg">
+
+    <ul>
+      <li>Scream</li>
+      <li>They Don't Care About Us</li>
+      <li>Stranger in Moscow</li>
+      <li>You Are Not Alone</li>
+      <li>Earth Song</li>
+      <li>Childhood</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>Invincible (2001)</summary>
+
+    <img src="https://upload.wikimedia.org/wikipedia/en/5/55/Michael_Jackson_-_Invincible.png">
+
+    <ul>
+      <li>Unbreakable</li>
+      <li>You Rock My World</li>
+      <li>Butterflies</li>
+      <li>Speechless</li>
+      <li>Break of Dawn</li>
+      <li>Whatever Happens</li>
+    </ul>
+  </details>
+
+</section>
+
+<section id="timeline">
+
+  <h2>Timeline of Michael Jackson's Life</h2>
+
+  <div class="timeline">
+
+    <div class="timeline-item">
+
+      <h3>1960s — Jackson 5 Era</h3>
+
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Jackson_5_1974.JPG">
+
+      <p>
+        Michael became famous as a child star in The Jackson 5.
+      </p>
+
+    </div>
+
+    <div class="timeline-item">
+
+      <h3>1979 — Off the Wall</h3>
+
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Michael_Jackson_in_1988.jpg">
+
+      <p>
+        Michael transitioned into an adult solo superstar.
+      </p>
+
+    </div>
+
+    <div class="timeline-item">
+
+      <h3>1982 — Thriller Changes Music Forever</h3>
+
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Michael_Jackson_in_1988.jpg">
+
+      <p>
+        Thriller became the best-selling album in history and transformed music videos forever.
+      </p>
+
+    </div>
+
+    <div class="timeline-item">
+
+      <h3>1990s — Worldwide Fame</h3>
+
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Michael_Jackson_1993.jpg">
+
+      <p>
+        Michael Jackson became one of the most recognizable people on Earth.
+      </p>
+
+    </div>
+
+    <div class="timeline-item">
+
+      <h3>2000s — Controversies & Trial</h3>
+
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Michael_Jackson_2003.jpg">
+
+      <p>
+        Media attention focused heavily on his personal life and legal controversies.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="death">
+
+  <h2>Michael Jackson's Death</h2>
+
+  <div class="card">
+
+    <p>
+      Michael Jackson died on June 25, 2009, in Los Angeles, California.
+      His death was caused by acute propofol intoxication.
+    </p>
+
+    <br>
+
+    <p>
+      His personal doctor, Conrad Murray, was later convicted of involuntary manslaughter.
+    </p>
+
+    <br>
+
+    <p>
+      Michael’s death shocked the world and became one of the biggest celebrity news stories in history.
+      Millions of fans mourned his death across the globe.
+    </p>
+
+  </div>
+
+</section>
+
+<section id="controversy">
+
+  <h2>Child Abuse Allegations & Conspiracy Theories</h2>
+
+  <div class="card">
+
+    <p>
+      Michael Jackson faced multiple allegations of child sexual abuse during the 1990s and 2000s.
+      These accusations became one of the most controversial parts of his life and legacy.
+    </p>
+
+    <br>
+
+    <p>
+      In 2005, Michael Jackson was found not guilty on all criminal charges during his trial.
+    </p>
+
+    <br>
+
+    <p>
+      Some people believe he was innocent and unfairly targeted because of his fame and unusual lifestyle.
+      Others believe the accusations permanently damaged his reputation.
+    </p>
+
+    <br>
+
+    <p>
+      Conspiracy theories also spread after his death, including theories that he faked his death to escape fame.
+      Other theories focused on the music industry, media treatment, and his changing appearance.
+    </p>
+
+  </div>
+
+</section>
+
+<section id="analysis">
+
+  <h2>Historical Thinking Skills</h2>
+
+  <div class="card">
+
+    <h3>Cause & Effect</h3>
+
+    <p>
+      Michael Jackson's talent, music videos, and performances changed the entertainment industry forever.
+      His success helped grow MTV, global pop culture, and modern celebrity culture.
+    </p>
+
+    <br>
+
+    <h3>Comparison</h3>
+
+    <p>
+      Michael Jackson can be compared to artists like Beyoncé and Taylor Swift because they also have worldwide influence.
+      However, Michael transformed music videos and entertainment on an even larger global scale.
+    </p>
+
+    <br>
+
+    <h3>AP World Connection</h3>
+
+    <p>
+      Michael Jackson connects to globalization and cultural diffusion.
+      His music spread worldwide through television, radio, concerts, and the internet.
+    </p>
+
+    <br>
+
+    <h3>Key Moments That Changed His Career</h3>
+
+    <ul>
+      <li>Joining The Jackson 5</li>
+      <li>Release of Thriller</li>
+      <li>1993 allegations and media attention</li>
+      <li>2005 court trial</li>
+      <li>Death in 2009</li>
+    </ul>
+
+  </div>
+
+</section>
+
+<footer>
+
+  <p>
+    Michael Jackson History Project Website
+  </p>
+
+</footer>
 
 </body>
 </html>

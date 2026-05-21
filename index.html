@@ -2,26 +2,47 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<title>Michael Jackson | Ultimate Documentary Experience</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Michael Jackson | Complete Historical Archive</title>
 
 <style>
 body{
     margin:0;
     font-family:Arial, sans-serif;
-    background:#000;
+    background:black;
     color:white;
-    line-height:1.8;
+    overflow-x:hidden;
 }
 
+/* ===== CINEMATIC CHAPTERS ===== */
+.chapter{
+    min-height:100vh;
+    padding:90px 12%;
+    opacity:0;
+    transform:translateY(40px);
+    transition:all 1.2s ease;
+    background:radial-gradient(circle at top, #111 0%, #000 60%);
+}
+
+.chapter.visible{
+    opacity:1;
+    transform:translateY(0);
+}
+
+h1,h2{
+    color:gold;
+    letter-spacing:1px;
+}
+
+/* NAV */
 nav{
     position:fixed;
     top:0;
     width:100%;
-    background:#111;
+    background:rgba(0,0,0,0.9);
     display:flex;
     justify-content:center;
-    gap:15px;
+    gap:18px;
     padding:10px;
     border-bottom:1px solid gold;
     z-index:999;
@@ -33,21 +54,16 @@ nav a{
     font-weight:bold;
 }
 
-section{
-    padding:90px 12%;
-    min-height:100vh;
-}
-
-h1,h2{ color:gold; }
-
+/* CARDS */
 .card{
-    background:#111;
-    padding:20px;
-    margin-top:15px;
+    background:rgba(20,20,20,0.9);
+    padding:18px;
     border-radius:12px;
+    margin-top:15px;
+    border:1px solid #222;
 }
 
-/* Albums grid */
+/* ===== ALBUM GRID ===== */
 .album-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -55,46 +71,99 @@ h1,h2{ color:gold; }
 }
 
 .album-card{
-    background:#151515;
+    background:#141414;
     padding:15px;
     border-radius:10px;
     border:1px solid #333;
+    transition:0.3s;
 }
 
+.album-card:hover{
+    transform:scale(1.02);
+    border-color:gold;
+}
+
+/* dropdowns */
 details{
     margin-top:10px;
-    background:#0f0f0f;
+    background:#0e0e0e;
     padding:10px;
     border-radius:8px;
 }
 
-summary{ color:gold; cursor:pointer; }
+summary{
+    color:gold;
+    cursor:pointer;
+}
 
-/* rubric */
+/* RUBRIC */
 button{
     background:gold;
     border:none;
     padding:10px;
     margin:5px;
-    cursor:pointer;
     font-weight:bold;
+    cursor:pointer;
 }
 
 .hidden{ display:none; }
 
-/* timeline */
+/* TIMELINE */
 .timeline{
     display:flex;
     overflow-x:auto;
     gap:15px;
+    padding:10px;
 }
 
 .event{
-    min-width:250px;
+    min-width:260px;
     background:#111;
+    border:1px solid gold;
     padding:15px;
     border-radius:10px;
+}
+
+/* WORLD MAP */
+.map{
+    width:100%;
+    height:300px;
+    background:#111;
+    border-radius:10px;
+    position:relative;
+    overflow:hidden;
+}
+
+.dot{
+    width:12px;
+    height:12px;
+    background:gold;
+    border-radius:50%;
+    position:absolute;
+}
+
+.dot:hover::after{
+    content:attr(data-info);
+    position:absolute;
+    background:black;
+    color:white;
+    padding:6px;
     border:1px solid gold;
+    top:-40px;
+    left:-20px;
+    white-space:nowrap;
+}
+
+/* VIDEO BACKGROUND */
+.video-bg{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    opacity:0.15;
+    z-index:-1;
 }
 </style>
 </head>
@@ -104,132 +173,105 @@ button{
 <nav>
 <a href="#origins">Origins</a>
 <a href="#jackson5">Jackson 5</a>
-<a href="#change">Change</a>
 <a href="#timeline">Timeline</a>
 <a href="#fashion">Fashion</a>
 <a href="#superbowl">Super Bowl</a>
-<a href="#impact">Impact</a>
-<a href="#rubric">Rubric</a>
 <a href="#albums">Albums</a>
-<a href="#controversy">Controversy</a>
+<a href="#rubric">Rubric</a>
+<a href="#map">World</a>
 </nav>
 
 <!-- ORIGINS -->
-<section id="origins">
-<h2>Origins</h2>
+<section class="chapter" id="origins">
+<h2>Origins — Industrial Creation of a Global Icon</h2>
 <div class="card">
+Michael Jackson’s early life was shaped by:
+- economic pressure in Gary, Indiana
+- strict father-led discipline system
+- Motown industrial production structure
 
-Michael Jackson’s origins were shaped by **economic pressure, family discipline, and industrial music systems**.
+He was performing publicly before age 6 and entered professional touring before adolescence.
 
-Growing up in Gary, Indiana:
-- working-class environment
-- racial segregation era influences
-- gospel and church music exposure
-
-Joseph Jackson created a strict training system:
-- long rehearsals
-- discipline-based learning
-- performance-first childhood
-
-Motown reinforced this with:
-- controlled image production
-- choreographed identity
-- standardized pop structure
-
-Result: extreme early perfectionism and performance conditioning.
-
+This created a **performance-first identity system**, where perfection replaced childhood development.
 </div>
 </section>
 
 <!-- JACKSON 5 -->
-<section id="jackson5">
-<h2>Jackson 5 Era</h2>
+<section class="chapter" id="jackson5">
+<h2>Jackson 5 — Child Stardom Under Pressure</h2>
 <div class="card">
 
-Michael became **lead singer at age ~11** due to his vocal dominance and emotional expression.
+At age ~11, Michael became lead singer due to:
+- emotional vocal delivery
+- audience response dominance
+- exceptional stage control
 
-He performed under:
-- strict touring schedules
-- industrial rehearsal systems
+System conditions:
+- constant rehearsals
+- touring schedules
 - Motown-controlled branding
 
-Key songs:
+Songs:
 - I Want You Back
 - ABC
-- The Love You Save
 - I’ll Be There
+- The Love You Save
 
-This represents one of the clearest examples of child performance industrialization in modern pop history.
-
-</div>
-</section>
-
-<!-- CHANGE -->
-<section id="change">
-<h2>Change Over Time</h2>
-<div class="card">
-
-Three major phases:
-
-1. Controlled performer (Jackson 5)
-2. Artistic independence (Thriller era)
-3. Global cultural institution (Bad → HIStory → Invincible)
-
-He evolved from:
-family-controlled artist → independent creator → global symbolic figure.
+This represents early **industrialized child performance culture** in American pop.
 
 </div>
 </section>
 
 <!-- TIMELINE -->
-<section id="timeline">
-<h2>Life Timeline</h2>
+<section class="chapter" id="timeline">
+<h2>Timeline — Life Evolution</h2>
 
 <div class="timeline">
-<div class="event">1969: Jackson 5 Motown debut</div>
-<div class="event">1979: Off the Wall breakthrough</div>
-<div class="event">1982: Thriller global domination</div>
-<div class="event">1983: Moonwalk debut</div>
-<div class="event">1987: Bad era global tour</div>
-<div class="event">1993: Super Bowl Rose Bowl performance</div>
-<div class="event">2001: Invincible album</div>
-<div class="event">2009: Death</div>
+<div class="event">1969 — Jackson 5 debut</div>
+<div class="event">1979 — Off the Wall independence</div>
+<div class="event">1982 — Thriller global explosion</div>
+<div class="event">1983 — Moonwalk debut</div>
+<div class="event">1987 — Bad era global dominance</div>
+<div class="event">1993 — Super Bowl Rose Bowl performance</div>
+<div class="event">2009 — Death</div>
 </div>
 
 </section>
 
 <!-- FASHION -->
-<section id="fashion">
-<h2>Fashion & Identity</h2>
+<section class="chapter" id="fashion">
+<h2>Fashion — Identity Engineering System</h2>
 <div class="card">
 
-Michael Jackson’s fashion defined modern pop visual identity:
+Michael Jackson created modern pop visual identity:
 
+Core elements:
 - red Thriller jacket
-- military Bad-era jackets
+- military Bad jackets
 - single white glove
 - fedora hats
 - sunglasses mystique style
-- white socks + black loafers
+- black loafers + white socks
 
-Fashion purpose:
-- visual stage readability
-- identity branding system
+Function:
+- stage visibility
+- identity branding
 - movement enhancement
 
-He created the modern pop star “visual blueprint.”
+Impact:
+He created the blueprint for modern celebrity branding.
 
 </div>
 </section>
 
 <!-- SUPER BOWL -->
-<section id="superbowl">
+<section class="chapter" id="superbowl">
 <h2>Super Bowl XXVII (1993)</h2>
 <div class="card">
 
-Held at the **Rose Bowl Stadium (Pasadena, California)**.
+Held at **Rose Bowl Stadium, Pasadena, California**.
 
-Songs:
+Songs performed:
 - Jam
 - Billie Jean
 - Black or White
@@ -237,96 +279,49 @@ Songs:
 
 Key innovation:
 - 90-second silent audience hold
-- stadium-wide emotional control
-- halftime becomes global entertainment standard
+- halftime becomes global entertainment system
+- stadium-scale emotional control
 
-This performance permanently changed live broadcast entertainment structure.
+This permanently redefined live performance production.
 
-</div>
-</section>
-
-<!-- IMPACT -->
-<section id="impact">
-<h2>Impact</h2>
-<div class="card">
-
-Global impact:
-- broke racial barriers in mainstream media
-- expanded global pop culture synchronization
-- influenced worldwide entertainment industries
-
-Cultural impact:
-- music video cinematic evolution
-- modern dance influence
-- global fan culture formation
-
-</div>
-</section>
-
-<!-- RUBRIC -->
-<section id="rubric">
-<h2>Rubric Analyzer</h2>
-
-<button onclick="toggle('cause')">Cause & Effect</button>
-<button onclick="toggle('compare')">Comparison</button>
-<button onclick="toggle('global')">AP World</button>
-
-<div id="cause" class="card hidden">
-CAUSE: strict upbringing + Motown system + media expansion  
-EFFECT: global pop standardization + MTV revolution
-</div>
-
-<div id="compare" class="card hidden">
-Compared to Elvis: Elvis expanded rock; MJ transformed performance + visual media systems.
-</div>
-
-<div id="global" class="card hidden">
-AP World: Cultural globalization through mass media diffusion systems.
 </div>
 </section>
 
 <!-- ALBUMS -->
-<section id="albums">
-<h2>Albums</h2>
+<section class="chapter" id="albums">
+<h2>Albums — Full Evolution System</h2>
 
 <div class="album-grid">
 
 <div class="album-card">
 <h3>Off the Wall</h3>
-<p>Funk / disco / early pop evolution</p>
-<details><summary>Tracklist</summary>
-<ul>
-<li>Rock With You</li>
-<li>Don’t Stop ’Til You Get Enough</li>
-</ul>
+<p>Funk / disco / early modern pop independence</p>
+<details><summary>Tracks</summary>
+<ul><li>Rock With You</li><li>Don’t Stop ’Til You Get Enough</li></ul>
 </details>
 </div>
 
 <div class="album-card">
 <h3>Thriller</h3>
-<p>Pop / rock / cinematic revolution</p>
-<details><summary>Tracklist</summary>
-<ul>
-<li>Billie Jean</li>
-<li>Beat It</li>
-<li>Thriller</li>
-</ul>
+<p>Cinematic pop revolution</p>
+<details><summary>Tracks</summary>
+<ul><li>Billie Jean</li><li>Beat It</li><li>Thriller</li></ul>
 </details>
 </div>
 
 <div class="album-card">
 <h3>Bad</h3>
-<p>Hard pop / global dominance era</p>
+<p>Hard pop global domination era</p>
 </div>
 
 <div class="album-card">
 <h3>Dangerous</h3>
-<p>New jack swing / social themes</p>
+<p>New jack swing + social messaging</p>
 </div>
 
 <div class="album-card">
 <h3>HIStory</h3>
-<p>Political / emotional expression</p>
+<p>Political + emotional response era</p>
 </div>
 
 <div class="album-card">
@@ -336,33 +331,58 @@ AP World: Cultural globalization through mass media diffusion systems.
 
 <div class="album-card">
 <h3>Xscape</h3>
-<p>Posthumous releases</p>
+<p>Posthumous global release</p>
 </div>
 
 </div>
 </section>
 
-<!-- CONTROVERSY -->
-<section id="controversy">
-<h2>Controversies</h2>
-<div class="card">
+<!-- RUBRIC -->
+<section class="chapter" id="rubric">
+<h2>Rubric Analyzer</h2>
 
-Michael Jackson faced long-term allegations and public scrutiny.
+<button onclick="toggle('cause')">Cause & Effect</button>
+<button onclick="toggle('compare')">Comparison</button>
+<button onclick="toggle('global')">AP World</button>
 
-- child abuse allegations in 1990s and 2000s
-- 2005 criminal trial → acquittal on all charges
-- ongoing public debate about legacy
-
-Macaulay Culkin stated he never experienced abuse and described friendship positively.
-
-This remains a debated historical topic in media studies.
-
+<div id="cause" class="card hidden">
+CAUSE: strict upbringing + Motown system + MTV rise  
+EFFECT: global pop standardization + music video revolution
 </div>
+
+<div id="compare" class="card hidden">
+Compared to Elvis Presley: Elvis expanded rock; MJ transformed performance, dance, and global visual media systems.
+</div>
+
+<div id="global" class="card hidden">
+AP World Theme: Globalization  
+MJ represents cultural diffusion through mass media systems.
+</div>
+</section>
+
+<!-- WORLD MAP -->
+<section class="chapter" id="map">
+<h2>World Influence Map</h2>
+
+<div class="map">
+<div class="dot" style="top:50%; left:20%;" data-info="USA: Origin & global media base"></div>
+<div class="dot" style="top:45%; left:50%;" data-info="Europe: Massive stadium tours"></div>
+<div class="dot" style="top:60%; left:75%;" data-info="Asia: Largest fan expansion"></div>
+</div>
+
 </section>
 
 <script>
+const chapters=document.querySelectorAll('.chapter');
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(e=>{
+if(e.isIntersecting){e.target.classList.add('visible');}
+});
+},{threshold:0.2});
+chapters.forEach(c=>observer.observe(c));
+
 function toggle(id){
-    document.getElementById(id).classList.toggle("hidden");
+document.getElementById(id).classList.toggle("hidden");
 }
 </script>
 

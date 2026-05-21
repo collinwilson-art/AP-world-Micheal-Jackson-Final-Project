@@ -2,321 +2,231 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<title>Michael Jackson | Interactive Documentary</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Michael Jackson | Complete Life & Cultural Archive</title>
 
 <style>
 body{
     margin:0;
     font-family:Arial, sans-serif;
-    background:#0a0a0a;
+    background:#000;
     color:white;
-    line-height:1.85;
+    overflow-x:hidden;
 }
 
-header{
-    background:black;
-    padding:90px 20px;
-    text-align:center;
-    border-bottom:3px solid gold;
+/* ===== Netflix-style sections ===== */
+.section{
+    min-height:100vh;
+    padding:80px 10%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    border-bottom:1px solid #222;
 }
 
-header h1{
+h1,h2{
     color:gold;
-    font-size:64px;
-    margin:0;
 }
 
+/* Sticky navigation */
 nav{
-    position:sticky;
+    position:fixed;
     top:0;
-    background:#111;
-    text-align:center;
-    padding:12px;
+    width:100%;
+    background:rgba(0,0,0,0.9);
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    padding:10px;
+    z-index:999;
     border-bottom:1px solid gold;
 }
 
 nav a{
     color:white;
-    margin:10px;
     text-decoration:none;
     font-weight:bold;
 }
 
-section{
-    padding:60px 12%;
-}
-
-h2{
-    color:gold;
-    font-size:36px;
-}
-
+/* Cards */
 .card{
-    background:#181818;
-    padding:25px;
+    background:#111;
+    padding:20px;
     border-radius:12px;
     margin-top:15px;
 }
 
-details{
-    background:#141414;
-    margin:14px 0;
-    padding:16px;
+/* Rubric buttons */
+.rubric-btn{
+    background:gold;
+    color:black;
+    padding:10px;
+    border:none;
+    margin:5px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+/* hidden panels */
+.hidden{
+    display:none;
+}
+
+/* Timeline */
+.timeline{
+    display:flex;
+    overflow-x:auto;
+    gap:20px;
+    padding:20px;
+}
+
+.event{
+    min-width:250px;
+    background:#111;
+    padding:15px;
+    border-radius:10px;
+    border:1px solid gold;
+}
+
+/* Album UI */
+.album{
+    background:#111;
+    padding:15px;
+    margin:10px;
     border-radius:10px;
 }
 
-summary{
-    color:gold;
-    cursor:pointer;
-    font-weight:bold;
+/* Map */
+svg{
+    width:100%;
+    max-width:800px;
+    background:#111;
+    border-radius:10px;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-<h1>Michael Jackson</h1>
-<p>
-A complete historical archive covering Michael Jackson’s life, music, fashion, performances, controversies, and global cultural transformation.
-</p>
-</header>
-
+<!-- NAV -->
 <nav>
+<a href="#hero">Intro</a>
 <a href="#origins">Origins</a>
-<a href="#jackson5">Jackson 5</a>
-<a href="#change">Change</a>
-<a href="#key">Key Moments</a>
-<a href="#fashion">Fashion</a>
-<a href="#impact">Impact</a>
-<a href="#analysis">Analysis</a>
-<a href="#album">Album</a>
+<a href="#timeline">Timeline</a>
+<a href="#rubric">Rubric</a>
+<a href="#map">World Impact</a>
+<a href="#albums">Albums</a>
 </nav>
 
+<!-- HERO -->
+<section class="section" id="hero">
+<h1>MICHAEL JACKSON</h1>
+<p>Interactive Documentary Experience — Music, Power, Culture, and Global Influence</p>
+</section>
+
 <!-- ORIGINS -->
-<section id="origins">
+<section class="section" id="origins">
 <h2>Origins</h2>
 <div class="card">
+Michael Jackson grew up in Gary, Indiana under extreme structural pressure:
+- working-class economic conditions
+- strict father-driven discipline system
+- Motown industrial music control
 
-Michael Jackson’s origins were shaped by three major forces: economic pressure, family discipline, and the industrial music system of Motown.
-
-Growing up in Gary, Indiana, he was exposed to:
-- working-class financial struggle
-- strict parental discipline
-- church-based musical influence
-
-His father, Joseph Jackson, treated music as a structured career path rather than a hobby. Rehearsals were long, repetitive, and highly controlled, creating a system where discipline mattered more than childhood experience.
-
-By age 5, Michael was performing. By age 11, he was already a professional lead singer in a touring group.
-
+By age 11, he was lead singer of the Jackson 5 due to vocal dominance and emotional performance ability.
+This created a childhood shaped by professional expectation rather than normal development.
 </div>
 </section>
 
-<!-- JACKSON 5 -->
-<section id="jackson5">
-<h2>Jackson 5 Era</h2>
-<div class="card">
+<!-- TIMELINE -->
+<section class="section" id="timeline">
+<h2>Life Timeline (Animated Structure)</h2>
 
-Michael was pushed into the **lead singer role at around age 11** because of his extraordinary vocal control and emotional expression.
+<div class="timeline">
+<div class="event">1964–1969: Jackson 5 formation</div>
+<div class="event">1969: Motown signing</div>
+<div class="event">1972: Solo debut albums</div>
+<div class="event">1982: Thriller released</div>
+<div class="event">1983: Moonwalk debut</div>
+<div class="event">1993: Super Bowl Rose Bowl performance</div>
+<div class="event">2009: Death</div>
+</div>
 
-The Jackson 5 were managed under Motown’s strict system:
-- rehearsals multiple hours daily
-- choreographed movement precision
-- controlled public image
+</section>
 
-### Key Songs:
-- I Want You Back
-- ABC
-- The Love You Save
-- I’ll Be There
+<!-- RUBRIC -->
+<section class="section" id="rubric">
+<h2>Rubric Analyzer</h2>
 
-### Historical significance:
-This era shows how child performance in the music industry can become an **industrial system**, where talent is shaped by external pressure rather than natural development.
+<button class="rubric-btn" onclick="toggle('cause')">Cause & Effect</button>
+<button class="rubric-btn" onclick="toggle('compare')">Comparison</button>
+<button class="rubric-btn" onclick="toggle('global')">AP World</button>
 
+<div id="cause" class="card hidden">
+CAUSE: strict childhood + Motown system + media expansion  
+EFFECT: global pop standardization + music video revolution + celebrity culture system
+</div>
+
+<div id="compare" class="card hidden">
+Compared to Elvis: Elvis globalized rock; MJ globalized performance + visual media + choreography systems.
+</div>
+
+<div id="global" class="card hidden">
+AP World Theme: Globalization  
+MJ represents cultural diffusion through global media networks.
 </div>
 </section>
 
-<!-- CHANGE -->
-<section id="change">
-<h2>Change Over Time</h2>
-<div class="card">
+<!-- WORLD MAP -->
+<section class="section" id="map">
+<h2>Global Influence Map</h2>
 
-Michael evolved through three major phases:
+<svg viewBox="0 0 800 400">
+<!-- simplified regions -->
+<circle cx="150" cy="200" r="20" fill="gold"></circle>
+<circle cx="400" cy="180" r="20" fill="gold"></circle>
+<circle cx="650" cy="220" r="20" fill="gold"></circle>
+</svg>
 
-### 1. Controlled performer (Jackson 5)
-Identity controlled by family + Motown system.
-
-### 2. Independent artist (Thriller era)
-Creative control increases, music videos become films, MTV spreads globally.
-
-### 3. Global cultural figure (Bad → later years)
-Becomes humanitarian symbol + stadium performer + global icon.
-
-This shows a shift from:
-controlled artist → independent creator → global cultural system.
-
-</div>
+<p>Gold points represent major MJ influence zones: USA, Europe, Asia global fandom expansion.</p>
 </section>
 
-<!-- KEY MOMENTS -->
-<section id="key">
-<h2>Key Moments</h2>
-<div class="card">
+<!-- ALBUMS -->
+<section class="section" id="albums">
+<h2>Albums</h2>
 
-- Motown 25 (moonwalk global breakthrough)
-- Thriller release (music video revolution)
-- Super Bowl 1993 (Rose Bowl Stadium, Pasadena → halftime becomes global event)
-
-Each moment permanently changed how entertainment works globally.
-
-</div>
-</section>
-
-<!-- FASHION -->
-<section id="fashion">
-<h2>Fashion & Visual Identity</h2>
-<div class="card">
-
-Michael Jackson’s fashion was not random — it was a **carefully constructed visual identity system** that influenced global style culture.
-
-### Signature Elements:
-- Military-style jackets (Bad era)
-- Red leather jacket (Thriller)
-- Single white glove (symbolic stage identity)
-- Fedora hats (performance silhouette control)
-- Black loafers + white socks (dance visibility enhancement)
-- Aviator sunglasses (privacy + mystique branding)
-
-### Why fashion mattered:
-His clothing was designed for:
-- visual recognition from stadium distance
-- enhanced dance visibility
-- symbolic identity creation
-
-### Cultural impact:
-His style influenced:
-- global pop fashion trends
-- stage costume design in modern music
-- celebrity branding systems
-
-He essentially created the blueprint for modern pop star visual identity.
-
-</div>
-</section>
-
-<!-- IMPACT -->
-<section id="impact">
-<h2>Impact</h2>
-<div class="card">
-
-### Global Impact:
-- broke racial barriers in MTV and global media
-- expanded American pop culture worldwide
-- created shared global entertainment experiences
-
-### Cultural Impact:
-- changed music videos into cinematic storytelling
-- set modern performance standards
-- influenced generations of artists
-
-### Why it matters:
-Michael Jackson represents the moment where entertainment became globally synchronized through media systems.
-
-</div>
-</section>
-
-<!-- ANALYSIS -->
-<section id="analysis">
-<h2>Historical Thinking Skills</h2>
-<div class="card">
-
-### Cause & Effect:
-CAUSE:
-- strict childhood training
-- Motown industrial system
-- rise of MTV/global TV
-
-EFFECT:
-- global pop culture standardization
-- music video revolution
-- stadium entertainment transformation
-
-### Comparison:
-Compared to Elvis Presley:
-- Elvis spread rock music globally
-- Michael Jackson transformed music + dance + visual media simultaneously
-
-### AP World Connection:
-Theme: Globalization
-
-Michael Jackson shows how media spreads culture instantly worldwide.
-
-</div>
-</section>
-
-<!-- ALBUM -->
-<section id="album">
-<h2>Album</h2>
-
-<div class="card">
-Full solo discography showing his artistic evolution.
+<div class="album">
+<h3>Thriller</h3>
+<p>Genre: Pop / Funk / Rock fusion</p>
+<audio controls>
+<source src="thriller_sample.mp3" type="audio/mpeg">
+</audio>
 </div>
 
-<details>
-<summary>Thriller (1982)</summary>
-<ul>
-<li>Billie Jean</li>
-<li>Beat It</li>
-<li>Thriller</li>
-<li>Human Nature</li>
-</ul>
-</details>
+<div class="album">
+<h3>Bad</h3>
+<p>Genre: Pop / Hard Funk / Street Pop</p>
+<audio controls>
+<source src="bad_sample.mp3" type="audio/mpeg">
+</audio>
+</div>
 
-<details>
-<summary>Bad (1987)</summary>
-<ul>
-<li>Man in the Mirror</li>
-<li>Smooth Criminal</li>
-<li>Bad</li>
-</ul>
-</details>
-
-<details>
-<summary>Dangerous (1991)</summary>
-<ul>
-<li>Black or White</li>
-<li>Heal the World</li>
-<li>Jam</li>
-</ul>
-</details>
-
-<details>
-<summary>HIStory (1995)</summary>
-<ul>
-<li>Earth Song</li>
-<li>They Don’t Care About Us</li>
-<li>Scream</li>
-</ul>
-</details>
-
-<details>
-<summary>Invincible (2001)</summary>
-<ul>
-<li>You Rock My World</li>
-<li>Butterflies</li>
-</ul>
-</details>
-
-<details>
-<summary>Xscape (2014)</summary>
-<ul>
-<li>Love Never Felt So Good</li>
-<li>Xscape</li>
-</ul>
-</details>
+<div class="album">
+<h3>Dangerous</h3>
+<p>Genre: New Jack Swing / R&B</p>
+<audio controls>
+<source src="dangerous_sample.mp3" type="audio/mpeg">
+</audio>
+</div>
 
 </section>
+
+<script>
+function toggle(id){
+    const el = document.getElementById(id);
+    el.classList.toggle("hidden");
+}
+</script>
 
 </body>
 </html>

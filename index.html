@@ -26,15 +26,11 @@ body{
 
 header{
     height:100vh;
-    background:
-    linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.85)),
-    url("https://upload.wikimedia.org/wikipedia/commons/5/51/Michael_Jackson_in_1988.jpg");
-    background-size:cover;
-    background-position:center;
+    background: linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.9));
     display:flex;
+    flex-direction:column;
     justify-content:center;
     align-items:center;
-    flex-direction:column;
     text-align:center;
     padding:20px;
 }
@@ -57,8 +53,8 @@ nav{
     background:black;
     padding:15px;
     text-align:center;
-    z-index:1000;
     border-bottom:2px solid #ffd700;
+    z-index:1000;
 }
 
 nav a{
@@ -66,7 +62,6 @@ nav a{
     text-decoration:none;
     margin:0 12px;
     font-weight:600;
-    transition:.3s;
 }
 
 nav a:hover{
@@ -81,33 +76,26 @@ h2{
     color:#ffd700;
     text-align:center;
     margin-bottom:40px;
-    font-size:2.8rem;
+    font-size:2.6rem;
 }
 
 .card{
     background:#1d1d1d;
     padding:25px;
     border-radius:15px;
-    margin-top:25px;
-    box-shadow:0 0 15px rgba(255,215,0,.15);
+    margin-top:20px;
 }
 
 .album-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:25px;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
 }
 
 .album-preview{
     background:#1f1f1f;
     padding:20px;
-    border-radius:15px;
-    transition:.3s;
-}
-
-.album-preview:hover{
-    transform:translateY(-5px);
-    box-shadow:0 0 20px rgba(255,215,0,.3);
+    border-radius:12px;
 }
 
 .album-preview h3{
@@ -118,7 +106,7 @@ details{
     background:#1f1f1f;
     margin-top:20px;
     padding:20px;
-    border-radius:15px;
+    border-radius:12px;
 }
 
 summary{
@@ -128,55 +116,16 @@ summary{
     font-weight:bold;
 }
 
-details img{
-    width:250px;
-    margin-top:20px;
-    border-radius:10px;
-}
-
-.timeline{
-    border-left:4px solid #ffd700;
-    padding-left:30px;
-}
-
-.timeline-item{
-    margin-bottom:60px;
-}
-
-.timeline-item img{
-    width:100%;
-    max-width:500px;
-    border-radius:12px;
-    margin:20px 0;
-}
-
 ul{
     margin-left:25px;
-    margin-top:15px;
+    margin-top:10px;
 }
 
 footer{
     background:black;
-    padding:30px;
+    padding:25px;
     text-align:center;
     border-top:2px solid #ffd700;
-}
-
-img{
-    display:block;
-}
-
-@media(max-width:768px){
-
-    header h1{
-        font-size:3rem;
-    }
-
-    nav a{
-        display:block;
-        margin:10px 0;
-    }
-
 }
 
 </style>
@@ -185,55 +134,37 @@ img{
 <body>
 
 <header>
-
 <h1>Michael Jackson</h1>
-
 <p>
-The King of Pop changed music, dance, entertainment, fashion, and celebrity culture forever.
-This website explores Michael Jackson’s albums, success, controversies, Super Bowl performance,
-moonwalk, personal struggles, death, conspiracy theories, and worldwide influence.
+The King of Pop — music, dance, global influence, controversy, and legacy that changed the world forever.
 </p>
-
 </header>
 
 <nav>
-
 <a href="#history">History</a>
 <a href="#jackson5">Jackson 5</a>
-<a href="#moonwalk">Moonwalk</a>
 <a href="#superbowl">Super Bowl</a>
+<a href="#moonwalk">Moonwalk</a>
 <a href="#albums">Albums</a>
-<a href="#timeline">Timeline</a>
-<a href="#death">Death</a>
-<a href="#controversy">Controversies</a>
-<a href="#analysis">Historical Analysis</a>
-
+<a href="#controversy">Controversy</a>
+<a href="#analysis">Impact</a>
 </nav>
 
 <section id="history">
 
-<h2>History of Michael Jackson</h2>
+<h2>History & Rise to Fame</h2>
 
 <div class="card">
 
 <p>
-Michael Jackson was born on August 29, 1958, in Gary, Indiana.
-He began performing at a very young age alongside his brothers in The Jackson 5.
-His father, Joe Jackson, pushed the group to practice constantly, which helped them become one of the biggest musical groups in the world.
+Michael Jackson (1958–2009) began performing as a child in The Jackson 5 before becoming the most influential solo entertainer in history.
+He revolutionized pop music, music videos, live performance, and global celebrity culture.
 </p>
 
 <br>
 
 <p>
-Michael quickly became the standout star because of his powerful voice, incredible dancing ability, and stage presence.
-As he grew older, he transitioned into a solo artist and eventually became the most famous entertainer on Earth during the 1980s and 1990s.
-</p>
-
-<br>
-
-<p>
-Michael Jackson revolutionized music videos, dancing, live performances, fashion, and pop culture.
-He became known worldwide as <strong>"The King of Pop."</strong>
+He became known for unmatched stage presence, record-breaking albums, and iconic dance moves like the moonwalk.
 </p>
 
 </div>
@@ -242,65 +173,23 @@ He became known worldwide as <strong>"The King of Pop."</strong>
 
 <section id="jackson5">
 
-<h2>The Jackson 5 Success</h2>
+<h2>The Jackson 5</h2>
 
 <div class="card">
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Jackson_5_1974.JPG"
-style="width:100%; max-width:600px; border-radius:12px; margin:auto;">
-
 <p>
-The Jackson 5 became one of the most successful musical groups of the late 1960s and early 1970s.
-The group consisted of Michael and his brothers Jackie, Tito, Jermaine, and Marlon.
-</p>
-
-<br>
-
-<p>
-After signing with Motown Records, they exploded in popularity with hit songs like:
+The Jackson 5 were a Motown group that launched Michael Jackson’s career.
+They became global stars in the late 1960s and early 1970s.
 </p>
 
 <ul>
 <li>I Want You Back</li>
 <li>ABC</li>
-<li>The Love You Save</li>
 <li>I'll Be There</li>
 </ul>
 
 <p>
-Michael amazed audiences because of his mature singing voice and confidence despite being so young.
-The Jackson 5 helped break racial barriers in pop music and became one of the first Black groups to achieve massive global success.
-</p>
-
-</div>
-
-</section>
-
-<section id="moonwalk">
-
-<h2>The Moonwalk</h2>
-
-<div class="card">
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Michael_Jackson_in_1988.jpg"
-style="width:100%; max-width:500px; border-radius:12px; margin:auto;">
-
-<p>
-Michael Jackson made the moonwalk famous during his 1983 performance of Billie Jean on Motown 25.
-Although versions of the move existed before him, Michael perfected it and turned it into one of the most iconic dance moves ever created.
-</p>
-
-<br>
-
-<p>
-The audience was shocked when Michael appeared to glide backwards across the stage.
-The move instantly became legendary and is still copied by dancers around the world today.
-</p>
-
-<br>
-
-<p>
-The moonwalk became one of the defining symbols of Michael Jackson's career and helped separate him from every other entertainer of his generation.
+Michael quickly became the standout performer due to his vocal talent and charisma.
 </p>
 
 </div>
@@ -313,33 +202,36 @@ The moonwalk became one of the defining symbols of Michael Jackson's career and 
 
 <div class="card">
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Michael_Jackson_1993.jpg"
-style="width:100%; max-width:700px; border-radius:12px; margin:auto;">
-
 <p>
-Michael Jackson's 1993 Super Bowl halftime performance completely changed the future of halftime shows forever.
-Before Michael performed, halftime shows were much smaller and less important.
-After his performance, the Super Bowl became known for massive celebrity performances.
+Michael Jackson’s Super Bowl performance changed entertainment history.
+Before 1993, halftime shows were small. After him, they became global spectacles.
 </p>
 
 <br>
 
 <p>
-Michael stood completely still for nearly two minutes while the crowd screamed.
-The moment became one of the most iconic entrances in television history.
+He performed for over 130 million viewers and stood motionless for nearly 2 minutes before starting — creating one of the most iconic entrances ever.
+</p>
+
+</div>
+
+</section>
+
+<section id="moonwalk">
+
+<h2>The Moonwalk</h2>
+
+<div class="card">
+
+<p>
+Michael Jackson popularized the moonwalk during his 1983 performance of Billie Jean.
+Although he did not invent it, he perfected it and made it globally famous.
 </p>
 
 <br>
 
 <p>
-He performed Jam, Billie Jean, Black or White, We Are the World, and Heal the World.
-The performance attracted over 130 million viewers and even caused TV ratings to increase during halftime.
-</p>
-
-<br>
-
-<p>
-Many people consider it the greatest halftime show ever because it transformed the Super Bowl into a worldwide entertainment event.
+It became one of the most iconic dance moves in history and a signature of his career.
 </p>
 
 </div>
@@ -348,293 +240,124 @@ Many people consider it the greatest halftime show ever because it transformed t
 
 <section id="albums">
 
-<h2>Michael Jackson Albums</h2>
+<h2>Complete Discography (ALL ALBUMS)</h2>
 
 <div class="album-grid">
 
-<div class="album-preview">
-<h3>Off the Wall (1979)</h3>
-<p>
-This album transformed Michael Jackson from a child star into a mature solo artist.
-It mixed disco, funk, and R&B sounds and included hits like Don't Stop 'Til You Get Enough and Rock with You.
-</p>
-</div>
-
-<div class="album-preview">
-<h3>Thriller (1982)</h3>
-<p>
-Thriller became the best-selling album in music history.
-Its music videos changed the entertainment industry forever and made Michael the most famous celebrity on Earth.
-</p>
-</div>
-
-<div class="album-preview">
-<h3>Bad (1987)</h3>
-<p>
-Bad proved Michael could continue dominating music after Thriller.
-The album produced five number-one singles and featured darker themes and stronger dance music.
-</p>
-</div>
-
-<div class="album-preview">
-<h3>Dangerous (1991)</h3>
-<p>
-Dangerous mixed pop music with hip-hop and new jack swing influences.
-It featured socially conscious songs like Black or White and Heal the World.
-</p>
-</div>
-
-<div class="album-preview">
-<h3>HIStory (1995)</h3>
-<p>
-HIStory reflected Michael's anger toward the media and public criticism.
-Many songs focused on fame, loneliness, betrayal, and racism.
-</p>
-</div>
-
-<div class="album-preview">
-<h3>Invincible (2001)</h3>
-<p>
-Invincible became Michael's final studio album released during his lifetime.
-It experimented with modern R&B and pop production styles.
-</p>
-</div>
-
-<div class="album-preview">
-<h3>Michael (2010)</h3>
-<p>
-Released after his death, this album used unfinished recordings Michael created before he died.
-</p>
-</div>
-
-<div class="album-preview">
-<h3>Xscape (2014)</h3>
-<p>
-Xscape featured unreleased Michael Jackson songs that producers modernized after his death to introduce his music to a new generation.
-</p>
-</div>
+<div class="album-preview"><h3>Got to Be There (1972)</h3><p>Debut solo album as a child star.</p></div>
+<div class="album-preview"><h3>Ben (1972)</h3><p>Included hit “Ben.”</p></div>
+<div class="album-preview"><h3>Music & Me (1973)</h3><p>Early youthful recordings.</p></div>
+<div class="album-preview"><h3>Forever, Michael (1975)</h3><p>Transition into mature sound.</p></div>
+<div class="album-preview"><h3>Off the Wall (1979)</h3><p>Breakthrough adult album with Quincy Jones.</p></div>
+<div class="album-preview"><h3>Thriller (1982)</h3><p>Best-selling album of all time.</p></div>
+<div class="album-preview"><h3>Bad (1987)</h3><p>Five #1 singles worldwide.</p></div>
+<div class="album-preview"><h3>Dangerous (1991)</h3><p>New jack swing era.</p></div>
+<div class="album-preview"><h3>HIStory (1995)</h3><p>Greatest hits + political themes.</p></div>
+<div class="album-preview"><h3>Blood on the Dance Floor (1997)</h3><p>Remixes + new tracks.</p></div>
+<div class="album-preview"><h3>Invincible (2001)</h3><p>Final studio album released during lifetime.</p></div>
+<div class="album-preview"><h3>Michael (2010)</h3><p>Posthumous album from unreleased recordings.</p></div>
+<div class="album-preview"><h3>Xscape (2014)</h3><p>Modernized unreleased material.</p></div>
 
 </div>
+
+<!-- DROPDOWN ALBUM SONGS -->
 
 <details>
-<summary>Thriller (1982)</summary>
-
-<img src="https://upload.wikimedia.org/wikipedia/en/5/55/Michael_Jackson_-_Thriller.png">
-
+<summary>Thriller (1982) Songs</summary>
 <ul>
-<li>Thriller</li>
-<li>Beat It</li>
 <li>Billie Jean</li>
+<li>Beat It</li>
+<li>Thriller</li>
 <li>Human Nature</li>
 <li>P.Y.T.</li>
-<li>Baby Be Mine</li>
 </ul>
-
 </details>
 
 <details>
-<summary>Bad (1987)</summary>
-
-<img src="https://upload.wikimedia.org/wikipedia/en/5/51/Michael_Jackson_-_Bad.png">
-
+<summary>Bad (1987) Songs</summary>
 <ul>
 <li>Bad</li>
 <li>Smooth Criminal</li>
-<li>Dirty Diana</li>
 <li>Man in the Mirror</li>
-<li>The Way You Make Me Feel</li>
+<li>Dirty Diana</li>
 </ul>
-
 </details>
 
 <details>
-<summary>Dangerous (1991)</summary>
-
-<img src="https://upload.wikimedia.org/wikipedia/en/0/0d/Michael_Jackson_-_Dangerous.png">
-
+<summary>Dangerous (1991) Songs</summary>
 <ul>
 <li>Black or White</li>
 <li>Remember the Time</li>
 <li>Heal the World</li>
-<li>Dangerous</li>
 </ul>
-
 </details>
 
 <details>
-<summary>Xscape (2014)</summary>
+<summary>HIStory (1995) Songs</summary>
+<ul>
+<li>Scream</li>
+<li>They Don’t Care About Us</li>
+<li>Earth Song</li>
+</ul>
+</details>
 
-<img src="https://upload.wikimedia.org/wikipedia/en/2/26/Michael_Jackson_Xscape.png">
+<details>
+<summary>Invincible (2001) Songs</summary>
+<ul>
+<li>You Rock My World</li>
+<li>Butterflies</li>
+</ul>
+</details>
 
+<details>
+<summary>Xscape (2014) Songs</summary>
 <ul>
 <li>Love Never Felt So Good</li>
 <li>Chicago</li>
-<li>A Place with No Name</li>
 <li>Slave to the Rhythm</li>
-<li>Xscape</li>
 </ul>
-
-<p>
-The songs on Xscape were recorded by Michael years before his death.
-Music producers later updated and completed the recordings using modern technology.
-</p>
-
 </details>
-
-</section>
-
-<section id="timeline">
-
-<h2>Timeline of Michael Jackson's Life</h2>
-
-<div class="timeline">
-
-<div class="timeline-item">
-
-<h3>1960s — The Jackson 5</h3>
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Jackson_5_1974.JPG">
-
-<p>
-Michael became famous worldwide as the lead singer of The Jackson 5.
-</p>
-
-</div>
-
-<div class="timeline-item">
-
-<h3>1982 — Thriller Era</h3>
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Michael_Jackson_in_1988.jpg">
-
-<p>
-Thriller changed the music industry forever and made Michael Jackson a global superstar.
-</p>
-
-</div>
-
-<div class="timeline-item">
-
-<h3>1983 — Moonwalk Performance</h3>
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Michael_Jackson_in_1988.jpg">
-
-<p>
-Michael debuted the moonwalk and shocked audiences worldwide.
-</p>
-
-</div>
-
-<div class="timeline-item">
-
-<h3>1993 — Super Bowl Halftime Show</h3>
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Michael_Jackson_1993.jpg">
-
-<p>
-Michael delivered one of the most iconic halftime performances ever.
-</p>
-
-</div>
-
-<div class="timeline-item">
-
-<h3>2009 — Death</h3>
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Michael_Jackson_in_1988.jpg">
-
-<p>
-Michael Jackson died on June 25, 2009, shocking millions of fans worldwide.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="death">
-
-<h2>Michael Jackson's Death</h2>
-
-<div class="card">
-
-<p>
-Michael Jackson died from acute propofol intoxication while preparing for his "This Is It" comeback concerts in 2009.
-</p>
-
-<br>
-
-<p>
-His doctor, Conrad Murray, was convicted of involuntary manslaughter for improperly administering the medication.
-</p>
-
-<br>
-
-<p>
-After Michael's death, conspiracy theories spread online claiming he faked his death to escape fame, pressure, or financial struggles.
-No evidence has ever proven these theories.
-</p>
-
-</div>
 
 </section>
 
 <section id="controversy">
 
-<h2>Child Abuse Allegations & Controversies</h2>
+<h2>Controversies & Public Life</h2>
 
 <div class="card">
 
+<h3>Child Abuse Allegations</h3>
 <p>
-Michael Jackson faced several accusations of child sexual abuse during the 1990s and 2000s.
-These accusations became one of the biggest controversies in entertainment history.
+Michael Jackson faced accusations during the 1990s and 2000s.
+He was found not guilty in his 2005 trial.
 </p>
 
 <br>
 
+<h3>Macaulay Culkin</h3>
 <p>
-In 2005, Michael Jackson went to trial and was found not guilty on all criminal charges.
-Supporters argued he was unfairly targeted because of his fame and unusual behavior.
-Critics believed the accusations permanently damaged his reputation.
+Actor Macaulay Culkin stated multiple times that Michael Jackson never abused him and defended their friendship publicly.
 </p>
 
 <br>
 
+<h3>Vitiligo</h3>
 <p>
-Actor Macaulay Culkin, one of Michael Jackson's closest celebrity friends, publicly stated multiple times that Michael Jackson never abused him.
-Culkin defended Michael in interviews and testified during the 2005 trial.
+Michael Jackson had vitiligo, a skin condition that caused loss of pigmentation and changes in appearance.
 </p>
 
 <br>
 
-<h3>Vitiligo & Appearance Changes</h3>
-
+<h3>Pepsi Accident</h3>
 <p>
-Michael Jackson suffered from vitiligo, a skin condition that causes patches of skin to lose pigmentation.
-As the condition spread, his appearance changed dramatically over time.
+A 1984 Pepsi commercial accident caused burns to his scalp after pyrotechnics malfunctioned.
 </p>
 
 <br>
 
+<h3>Death & Conspiracies</h3>
 <p>
-Many people incorrectly believed he intentionally changed his skin color.
-Michael publicly explained that vitiligo caused his skin to become lighter and that he used makeup to even out his skin tone.
-</p>
-
-<br>
-
-<h3>Pepsi Commercial Accident</h3>
-
-<p>
-In 1984, while filming a Pepsi commercial, pyrotechnics accidentally set Michael Jackson's hair on fire.
-He suffered second-degree burns and underwent painful medical treatment afterward.
-</p>
-
-<br>
-
-<p>
-Some people believe the accident and surgeries afterward contributed to his later struggles with pain medication.
+He died in 2009 from acute propofol intoxication. Conspiracy theories claim he faked his death, but there is no evidence.
 </p>
 
 </div>
@@ -643,58 +366,26 @@ Some people believe the accident and surgeries afterward contributed to his late
 
 <section id="analysis">
 
-<h2>Historical Thinking Skills</h2>
+<h2>Impact & Importance</h2>
 
 <div class="card">
 
-<h3>Cause & Effect</h3>
+<p><b>Cause & Effect:</b> His music videos transformed MTV and global entertainment.</p>
 
-<p>
-Michael Jackson's music videos, dancing, and performances changed global entertainment forever.
-MTV, celebrity culture, and live performances became much larger because of his influence.
-</p>
+<p><b>Comparison:</b> Compared to modern stars, he had unmatched global cultural influence in his era.</p>
 
-<br>
+<p><b>Global Impact:</b> Broke racial, cultural, and industry barriers worldwide.</p>
 
-<h3>Comparison</h3>
+<p><b>Personal Impact:</b> Inspired millions of artists, dancers, and performers.</p>
 
-<p>
-Michael Jackson can be compared to artists like Beyoncé and Taylor Swift because of their worldwide popularity and influence.
-However, Michael transformed music videos and dance performance on an even larger historical scale.
-</p>
-
-<br>
-
-<h3>AP World Connection</h3>
-
-<p>
-Michael Jackson connects to globalization and cultural diffusion.
-His music spread worldwide through television, radio, concerts, and the internet.
-</p>
-
-<br>
-
-<h3>Key Moments</h3>
-
-<ul>
-<li>Joining The Jackson 5</li>
-<li>Release of Thriller</li>
-<li>The Moonwalk Performance</li>
-<li>1993 Super Bowl Halftime Show</li>
-<li>2005 Trial</li>
-<li>Death in 2009</li>
-</ul>
+<p><b>AP World Connection:</b> Represents globalization and cultural diffusion through media.</p>
 
 </div>
 
 </section>
 
 <footer>
-
-<p>
-Michael Jackson Complete History Project Website
-</p>
-
+<p>Michael Jackson Legacy Website</p>
 </footer>
 
 </body>

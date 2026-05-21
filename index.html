@@ -1,524 +1,659 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Michael Jackson | History, Albums & Legacy</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<title>Michael Jackson | Complete History & Legacy</title>
 
-  <style>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      scroll-behavior:smooth;
-    }
+<style>
 
-    body{
-      font-family:'Poppins', sans-serif;
-      background:#111;
-      color:white;
-      line-height:1.7;
-    }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
 
-    header{
-      height:100vh;
-      background:
-      linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.85)),
-      url('https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=1200&auto=format&fit=crop');
-      background-size:cover;
-      background-position:center;
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items:center;
-      text-align:center;
-      padding:20px;
-    }
+body{
+    font-family:'Poppins', sans-serif;
+    background:#111;
+    color:white;
+    line-height:1.7;
+}
+
+header{
+    height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.85)),
+    url("https://images2.alphacoders.com/516/516664.jpg");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+    padding:20px;
+}
+
+header h1{
+    font-size:5rem;
+    color:#ffd700;
+    text-shadow:3px 3px 15px black;
+}
+
+header p{
+    max-width:900px;
+    margin-top:20px;
+    font-size:1.2rem;
+}
+
+nav{
+    position:sticky;
+    top:0;
+    background:black;
+    padding:15px;
+    text-align:center;
+    z-index:1000;
+    border-bottom:2px solid #ffd700;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 12px;
+    font-weight:600;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#ffd700;
+}
+
+section{
+    padding:80px 10%;
+}
+
+h2{
+    color:#ffd700;
+    text-align:center;
+    margin-bottom:40px;
+    font-size:2.8rem;
+}
+
+.card{
+    background:#1d1d1d;
+    padding:25px;
+    border-radius:15px;
+    margin-top:25px;
+    box-shadow:0 0 15px rgba(255,215,0,.15);
+}
+
+.album-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.album-preview{
+    background:#1f1f1f;
+    padding:20px;
+    border-radius:15px;
+    transition:.3s;
+}
+
+.album-preview:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 20px rgba(255,215,0,.3);
+}
+
+.album-preview h3{
+    color:#ffd700;
+}
+
+details{
+    background:#1f1f1f;
+    margin-top:20px;
+    padding:20px;
+    border-radius:15px;
+}
+
+summary{
+    cursor:pointer;
+    color:#ffd700;
+    font-size:1.2rem;
+    font-weight:bold;
+}
+
+details img{
+    width:250px;
+    margin-top:20px;
+    border-radius:10px;
+}
+
+.timeline{
+    border-left:4px solid #ffd700;
+    padding-left:30px;
+}
+
+.timeline-item{
+    margin-bottom:60px;
+}
+
+.timeline-item img{
+    width:100%;
+    max-width:500px;
+    border-radius:12px;
+    margin:20px 0;
+}
+
+ul{
+    margin-left:25px;
+    margin-top:15px;
+}
+
+footer{
+    background:black;
+    padding:30px;
+    text-align:center;
+    border-top:2px solid #ffd700;
+}
+
+@media(max-width:768px){
 
     header h1{
-      font-size:5rem;
-      color:#ffd700;
-      text-shadow:2px 2px 20px black;
-    }
-
-    header p{
-      max-width:900px;
-      margin-top:20px;
-      font-size:1.3rem;
-    }
-
-    nav{
-      position:sticky;
-      top:0;
-      background:black;
-      padding:15px;
-      z-index:1000;
-      text-align:center;
-      border-bottom:2px solid #ffd700;
+        font-size:3rem;
     }
 
     nav a{
-      color:white;
-      text-decoration:none;
-      margin:0 15px;
-      font-weight:600;
-      transition:.3s;
-    }
-
-    nav a:hover{
-      color:#ffd700;
-    }
-
-    section{
-      padding:80px 10%;
-    }
-
-    h2{
-      color:#ffd700;
-      margin-bottom:30px;
-      font-size:2.7rem;
-      text-align:center;
-    }
-
-    .card{
-      background:#1c1c1c;
-      padding:25px;
-      border-radius:15px;
-      margin-top:20px;
-      box-shadow:0 0 15px rgba(255,215,0,.2);
-    }
-
-    .album-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
-      gap:20px;
-    }
-
-    .album{
-      background:#222;
-      padding:20px;
-      border-radius:15px;
-      transition:.3s;
-      text-align:center;
-    }
-
-    .album:hover{
-      transform:translateY(-5px);
-      box-shadow:0 0 20px rgba(255,215,0,.4);
-    }
-
-    .album img{
-      width:100%;
-      border-radius:10px;
-      margin-top:15px;
-    }
-
-    details{
-      margin-top:20px;
-      background:#1c1c1c;
-      padding:20px;
-      border-radius:15px;
-    }
-
-    summary{
-      font-size:1.3rem;
-      cursor:pointer;
-      color:#ffd700;
-      font-weight:bold;
-    }
-
-    details img{
-      width:250px;
-      margin-top:20px;
-      border-radius:10px;
-    }
-
-    ul{
-      margin-top:20px;
-      margin-left:20px;
-    }
-
-    .timeline{
-      border-left:4px solid #ffd700;
-      padding-left:25px;
-    }
-
-    .timeline-item{
-      margin-bottom:50px;
-    }
-
-    .timeline-item img{
-      width:300px;
-      border-radius:10px;
-      margin:15px 0;
-    }
-
-    footer{
-      background:black;
-      text-align:center;
-      padding:30px;
-      border-top:2px solid #ffd700;
-    }
-
-    @media(max-width:768px){
-
-      header h1{
-        font-size:3rem;
-      }
-
-      nav a{
         display:block;
         margin:10px 0;
-      }
-
-      .timeline-item img{
-        width:100%;
-      }
-
     }
 
-  </style>
+}
+
+</style>
 </head>
 
 <body>
 
 <header>
 
-  <h1>Michael Jackson</h1>
+<h1>Michael Jackson</h1>
 
-  <p>
-    The King of Pop changed music, dance, entertainment, and global culture forever.
-    This website explores Michael Jackson’s history, albums, conspiracy theories,
-    historical impact, and legacy.
-  </p>
+<p>
+The King of Pop changed music, dance, entertainment, and celebrity culture forever.
+This website explores his albums, life story, controversies, achievements,
+the moonwalk, The Jackson 5, the Super Bowl performance, conspiracy theories,
+and historical impact.
+</p>
 
 </header>
 
 <nav>
 
-  <a href="#history">History</a>
-  <a href="#topsongs">Top Songs</a>
-  <a href="#albums">Albums</a>
-  <a href="#timeline">Timeline</a>
-  <a href="#death">Death</a>
-  <a href="#controversy">Controversies</a>
-  <a href="#analysis">Historical Analysis</a>
+<a href="#history">History</a>
+<a href="#jackson5">Jackson 5</a>
+<a href="#moonwalk">Moonwalk</a>
+<a href="#superbowl">Super Bowl</a>
+<a href="#albums">Albums</a>
+<a href="#timeline">Timeline</a>
+<a href="#death">Death</a>
+<a href="#controversy">Controversies</a>
+<a href="#analysis">Historical Analysis</a>
 
 </nav>
 
 <section id="history">
 
-  <h2>History of Michael Jackson</h2>
+<h2>History of Michael Jackson</h2>
 
-  <div class="card">
+<div class="card">
 
-    <p>
-      Michael Jackson was born on August 29, 1958, in Gary, Indiana.
-      He became famous as the lead singer of The Jackson 5 alongside his brothers.
-    </p>
+<p>
+Michael Jackson was born on August 29, 1958, in Gary, Indiana.
+He became famous at a young age because of his incredible singing and dancing talent.
+His father, Joe Jackson, managed him and his brothers in a group called The Jackson 5.
+</p>
 
-    <br>
+<br>
 
-    <p>
-      During the 1980s and 1990s, Michael Jackson became the most famous entertainer in the world.
-      His music videos, dance moves, live performances, and fashion changed the entertainment industry forever.
-    </p>
+<p>
+Michael eventually became the most famous entertainer in the world during the 1980s and 1990s.
+He revolutionized music videos, live performances, fashion, and dancing.
+His influence is still seen in artists today.
+</p>
 
-    <br>
-
-    <p>
-      Michael earned the nickname <strong>"The King of Pop"</strong>
-      because of his massive worldwide influence.
-    </p>
-
-  </div>
+</div>
 
 </section>
 
-<section id="topsongs">
+<section id="jackson5">
 
-  <h2>Top 5 Michael Jackson Songs</h2>
+<h2>The Jackson 5 Success</h2>
 
-  <div class="album-grid">
+<div class="card">
 
-    <div class="album">
-      <h3>1. Billie Jean</h3>
-      <p>One of the most iconic songs ever created.</p>
-    </div>
+<img src="https://cdn.britannica.com/89/151689-050-50A4C879/Jackson-Five-1972.jpg"
+style="width:100%; max-width:600px; border-radius:12px; margin-top:20px;">
 
-    <div class="album">
-      <h3>2. Thriller</h3>
-      <p>Known for the greatest music video in history.</p>
-    </div>
+<p>
+The Jackson 5 became one of the biggest musical groups of the late 1960s and early 1970s.
+The group included Michael and his brothers Jackie, Tito, Jermaine, and Marlon.
+</p>
 
-    <div class="album">
-      <h3>3. Beat It</h3>
-      <p>A revolutionary mix of pop and rock music.</p>
-    </div>
+<br>
 
-    <div class="album">
-      <h3>4. Smooth Criminal</h3>
-      <p>Famous for the anti-gravity lean dance move.</p>
-    </div>
+<p>
+They signed with Motown Records and quickly became worldwide stars.
+Songs like:
+</p>
 
-    <div class="album">
-      <h3>5. Man in the Mirror</h3>
-      <p>A song about helping others and changing the world.</p>
-    </div>
+<ul>
+<li>I Want You Back</li>
+<li>ABC</li>
+<li>The Love You Save</li>
+<li>I'll Be There</li>
+</ul>
 
-  </div>
+<p>
+became huge hits.
+Michael stood out because of his incredible voice and stage presence even as a child.
+</p>
+
+</div>
+
+</section>
+
+<section id="moonwalk">
+
+<h2>The Moonwalk</h2>
+
+<div class="card">
+
+<img src="https://i.imgur.com/7l6FQ8L.jpeg"
+style="width:100%; max-width:500px; border-radius:12px;">
+
+<p>
+Michael Jackson popularized the moonwalk during a live performance of "Billie Jean" in 1983.
+Although versions of the dance move existed before him,
+Michael made it famous worldwide.
+</p>
+
+<br>
+
+<p>
+The moonwalk became one of the most recognizable dance moves in history and helped establish Michael Jackson as one of the greatest performers ever.
+</p>
+
+</div>
+
+</section>
+
+<section id="superbowl">
+
+<h2>1993 Super Bowl Performance</h2>
+
+<div class="card">
+
+<img src="https://static01.nyt.com/images/2016/02/04/sports/04superbowl-jackson/04superbowl-jackson-superJumbo.jpg"
+style="width:100%; max-width:700px; border-radius:12px;">
+
+<p>
+Michael Jackson performed at the Super Bowl halftime show in 1993.
+It became one of the most important halftime performances ever because it transformed the halftime show into a major entertainment event.
+</p>
+
+<br>
+
+<p>
+His performance included:
+</p>
+
+<ul>
+<li>Jam</li>
+<li>Billie Jean</li>
+<li>Black or White</li>
+<li>Heal the World</li>
+</ul>
+
+<p>
+Millions of people watched around the world, and the NFL realized halftime performances could attract massive audiences.
+</p>
+
+</div>
 
 </section>
 
 <section id="albums">
 
-  <h2>Michael Jackson Albums</h2>
+<h2>Michael Jackson Albums</h2>
 
-  <details>
-    <summary>Thriller (1982)</summary>
+<div class="album-grid">
 
-    <img src="https://upload.wikimedia.org/wikipedia/en/5/55/Michael_Jackson_-_Thriller.png">
+<div class="album-preview">
+<h3>Off the Wall (1979)</h3>
+<p>
+This album helped Michael transition from child star to adult superstar.
+It mixed pop, funk, disco, and R&B music.
+</p>
+</div>
 
-    <ul>
-      <li>Wanna Be Startin' Somethin'</li>
-      <li>Baby Be Mine</li>
-      <li>The Girl Is Mine</li>
-      <li>Thriller</li>
-      <li>Beat It</li>
-      <li>Billie Jean</li>
-      <li>Human Nature</li>
-      <li>P.Y.T.</li>
-      <li>The Lady in My Life</li>
-    </ul>
-  </details>
+<div class="album-preview">
+<h3>Thriller (1982)</h3>
+<p>
+Thriller became the best-selling album in history and changed music videos forever.
+Songs like Billie Jean and Beat It became global hits.
+</p>
+</div>
 
-  <details>
-    <summary>Bad (1987)</summary>
+<div class="album-preview">
+<h3>Bad (1987)</h3>
+<p>
+Bad proved Michael's success was not temporary.
+The album produced multiple #1 singles and featured darker themes and stronger dance music.
+</p>
+</div>
 
-    <img src="https://upload.wikimedia.org/wikipedia/en/5/51/Michael_Jackson_-_Bad.png">
+<div class="album-preview">
+<h3>Dangerous (1991)</h3>
+<p>
+Dangerous introduced a new sound with more hip-hop and new jack swing influences.
+</p>
+</div>
 
-    <ul>
-      <li>Bad</li>
-      <li>The Way You Make Me Feel</li>
-      <li>Speed Demon</li>
-      <li>Liberian Girl</li>
-      <li>Man in the Mirror</li>
-      <li>Dirty Diana</li>
-      <li>Smooth Criminal</li>
-    </ul>
-  </details>
+<div class="album-preview">
+<h3>HIStory (1995)</h3>
+<p>
+HIStory focused heavily on Michael's frustrations with the media and public criticism.
+</p>
+</div>
 
-  <details>
-    <summary>Dangerous (1991)</summary>
+<div class="album-preview">
+<h3>Invincible (2001)</h3>
+<p>
+Michael's final studio album released during his lifetime.
+It featured modern R&B and pop sounds.
+</p>
+</div>
 
-    <img src="https://upload.wikimedia.org/wikipedia/en/0/0d/Michael_Jackson_-_Dangerous.png">
+<div class="album-preview">
+<h3>Michael (2010)</h3>
+<p>
+Released after his death, this album was created using unreleased recordings Michael made before he died.
+</p>
+</div>
 
-    <ul>
-      <li>Jam</li>
-      <li>Black or White</li>
-      <li>Remember the Time</li>
-      <li>Heal the World</li>
-      <li>Dangerous</li>
-    </ul>
-  </details>
+<div class="album-preview">
+<h3>Xscape (2014)</h3>
+<p>
+Xscape featured unreleased Michael Jackson songs that producers modernized and completed after his death.
+</p>
+</div>
 
-  <details>
-    <summary>HIStory (1995)</summary>
+</div>
 
-    <img src="https://upload.wikimedia.org/wikipedia/en/c/c1/Michael_Jackson_-_HIStory.jpg">
+<details>
+<summary>Thriller (1982) Songs</summary>
 
-    <ul>
-      <li>Scream</li>
-      <li>They Don't Care About Us</li>
-      <li>You Are Not Alone</li>
-      <li>Earth Song</li>
-    </ul>
-  </details>
+<img src="https://upload.wikimedia.org/wikipedia/en/5/55/Michael_Jackson_-_Thriller.png">
 
-  <details>
-    <summary>Invincible (2001)</summary>
+<ul>
+<li>Thriller</li>
+<li>Beat It</li>
+<li>Billie Jean</li>
+<li>Human Nature</li>
+<li>P.Y.T.</li>
+<li>Baby Be Mine</li>
+</ul>
 
-    <img src="https://upload.wikimedia.org/wikipedia/en/5/55/Michael_Jackson_-_Invincible.png">
+</details>
 
-    <ul>
-      <li>You Rock My World</li>
-      <li>Butterflies</li>
-      <li>Break of Dawn</li>
-    </ul>
-  </details>
+<details>
+<summary>Bad (1987) Songs</summary>
+
+<img src="https://upload.wikimedia.org/wikipedia/en/5/51/Michael_Jackson_-_Bad.png">
+
+<ul>
+<li>Bad</li>
+<li>Smooth Criminal</li>
+<li>Dirty Diana</li>
+<li>Man in the Mirror</li>
+<li>The Way You Make Me Feel</li>
+</ul>
+
+</details>
+
+<details>
+<summary>Dangerous (1991) Songs</summary>
+
+<img src="https://upload.wikimedia.org/wikipedia/en/0/0d/Michael_Jackson_-_Dangerous.png">
+
+<ul>
+<li>Black or White</li>
+<li>Remember the Time</li>
+<li>Heal the World</li>
+<li>Dangerous</li>
+</ul>
+
+</details>
+
+<details>
+<summary>Posthumous Albums</summary>
+
+<ul>
+<li>Michael (2010)</li>
+<li>Xscape (2014)</li>
+</ul>
+
+<p>
+These albums were possible because Michael Jackson recorded many unfinished songs before his death.
+Music producers later completed and released these recordings.
+</p>
+
+</details>
 
 </section>
 
 <section id="timeline">
 
-  <h2>Timeline of Michael Jackson's Life</h2>
+<h2>Timeline of Michael Jackson's Life</h2>
 
-  <div class="timeline">
+<div class="timeline">
 
-    <div class="timeline-item">
+<div class="timeline-item">
 
-      <h3>1960s — Jackson 5 Era</h3>
+<h3>1960s — The Jackson 5</h3>
 
-      <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=1200&auto=format&fit=crop">
+<img src="https://cdn.britannica.com/89/151689-050-50A4C879/Jackson-Five-1972.jpg">
 
-      <p>
-        Michael became famous as a child star in The Jackson 5.
-      </p>
+<p>
+Michael became famous worldwide as the lead singer of The Jackson 5.
+</p>
 
-    </div>
+</div>
 
-    <div class="timeline-item">
+<div class="timeline-item">
 
-      <h3>1982 — Thriller Changes Music Forever</h3>
+<h3>1982 — Thriller Era</h3>
 
-      <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images2.alphacoders.com/516/516664.jpg">
 
-      <p>
-        Thriller became the best-selling album in history and transformed music videos forever.
-      </p>
+<p>
+Thriller changed the music industry forever and made Michael Jackson a global superstar.
+</p>
 
-    </div>
+</div>
 
-    <div class="timeline-item">
+<div class="timeline-item">
 
-      <h3>1990s — Worldwide Fame</h3>
+<h3>1983 — Moonwalk Performance</h3>
 
-      <img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?q=80&w=1200&auto=format&fit=crop">
+<img src="https://i.imgur.com/7l6FQ8L.jpeg">
 
-      <p>
-        Michael Jackson became one of the most recognizable people on Earth.
-      </p>
+<p>
+Michael debuted the moonwalk and shocked audiences worldwide.
+</p>
 
-    </div>
+</div>
 
-    <div class="timeline-item">
+<div class="timeline-item">
 
-      <h3>2000s — Controversies & Trial</h3>
+<h3>1993 — Super Bowl Halftime Show</h3>
 
-      <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop">
+<img src="https://static01.nyt.com/images/2016/02/04/sports/04superbowl-jackson/04superbowl-jackson-superJumbo.jpg">
 
-      <p>
-        Media attention focused heavily on his personal life and legal controversies.
-      </p>
+<p>
+Michael delivered one of the most iconic halftime performances ever.
+</p>
 
-    </div>
+</div>
 
-  </div>
+<div class="timeline-item">
+
+<h3>2005 — Court Trial</h3>
+
+<img src="https://media.npr.org/assets/img/2019/06/21/gettyimages-52635493_custom-fdc2f76fd97e3b1cf947e1b3027f632e33e1d98f.jpg">
+
+<p>
+Michael Jackson was found not guilty on all criminal charges.
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<h3>2009 — Death</h3>
+
+<img src="https://media.cnn.com/api/v1/images/stellar/prod/190625151633-michael-jackson-file.jpg?q=w_3000,h_1687,x_0,y_0,c_fill">
+
+<p>
+Michael Jackson died on June 25, 2009, shocking millions of fans worldwide.
+</p>
+
+</div>
+
+</div>
 
 </section>
 
 <section id="death">
 
-  <h2>Michael Jackson's Death</h2>
+<h2>Michael Jackson's Death</h2>
 
-  <div class="card">
+<div class="card">
 
-    <p>
-      Michael Jackson died on June 25, 2009, in Los Angeles, California.
-      His death was caused by acute propofol intoxication.
-    </p>
+<p>
+Michael Jackson died from acute propofol intoxication while preparing for his "This Is It" comeback concerts.
+</p>
 
-    <br>
+<br>
 
-    <p>
-      His personal doctor, Conrad Murray, was later convicted of involuntary manslaughter.
-    </p>
+<p>
+His doctor, Conrad Murray, was convicted of involuntary manslaughter for improperly administering the medication.
+</p>
 
-    <br>
+<br>
 
-    <p>
-      Michael’s death shocked the world and became one of the biggest celebrity news stories in history.
-    </p>
+<p>
+After Michael's death, conspiracy theories spread online.
+Some people believed he faked his death because of stress, debt, or pressure from fame.
+</p>
 
-  </div>
+</div>
 
 </section>
 
 <section id="controversy">
 
-  <h2>Child Abuse Allegations & Conspiracy Theories</h2>
+<h2>Child Abuse Allegations & Controversies</h2>
 
-  <div class="card">
+<div class="card">
 
-    <p>
-      Michael Jackson faced multiple allegations of child sexual abuse during the 1990s and 2000s.
-    </p>
+<p>
+Michael Jackson faced several accusations of child sexual abuse during the 1990s and 2000s.
+These allegations became one of the biggest controversies in entertainment history.
+</p>
 
-    <br>
+<br>
 
-    <p>
-      In 2005, Michael Jackson was found not guilty on all criminal charges during his trial.
-    </p>
+<p>
+Supporters argued Michael was innocent and unfairly targeted because of his fame and unusual behavior.
+Critics believed the allegations permanently damaged his legacy.
+</p>
 
-    <br>
+<br>
 
-    <p>
-      Some people believe he was innocent and unfairly targeted because of his fame.
-      Others believe the accusations permanently damaged his legacy.
-    </p>
+<p>
+In 2005, Michael Jackson was found not guilty on all criminal charges during his court trial.
+</p>
 
-    <br>
+<br>
 
-    <p>
-      Conspiracy theories also spread after his death, including theories that he faked his death.
-    </p>
+<p>
+Documentaries like <em>Leaving Neverland</em> later reignited debates about the accusations after his death.
+</p>
 
-  </div>
+</div>
 
 </section>
 
 <section id="analysis">
 
-  <h2>Historical Thinking Skills</h2>
+<h2>Historical Thinking Skills</h2>
 
-  <div class="card">
+<div class="card">
 
-    <h3>Cause & Effect</h3>
+<h3>Cause & Effect</h3>
 
-    <p>
-      Michael Jackson's talent and innovation changed the entertainment industry forever.
-    </p>
+<p>
+Michael Jackson's music videos, dancing, and performances changed global entertainment forever.
+MTV, music videos, celebrity culture, and live performances became much larger because of his influence.
+</p>
 
-    <br>
+<br>
 
-    <h3>Comparison</h3>
+<h3>Comparison</h3>
 
-    <p>
-      Michael Jackson can be compared to Beyoncé and Taylor Swift because of their worldwide influence.
-    </p>
+<p>
+Michael Jackson can be compared to artists like Beyoncé or Taylor Swift because they also have worldwide influence.
+However, Michael transformed music videos and dance performance on a much larger historical scale.
+</p>
 
-    <br>
+<br>
 
-    <h3>AP World Connection</h3>
+<h3>AP World Connection</h3>
 
-    <p>
-      Michael Jackson connects to globalization and cultural diffusion.
-    </p>
+<p>
+Michael Jackson connects to globalization and cultural diffusion.
+His music spread worldwide through television, radio, concerts, and the internet.
+</p>
 
-    <br>
+<br>
 
-    <h3>Key Moments</h3>
+<h3>Key Moments</h3>
 
-    <ul>
-      <li>Joining The Jackson 5</li>
-      <li>Release of Thriller</li>
-      <li>1993 allegations</li>
-      <li>2005 trial</li>
-      <li>Death in 2009</li>
-    </ul>
+<ul>
+<li>Joining The Jackson 5</li>
+<li>Release of Thriller</li>
+<li>Moonwalk performance</li>
+<li>1993 Super Bowl performance</li>
+<li>2005 trial</li>
+<li>Death in 2009</li>
+</ul>
 
-  </div>
+</div>
 
 </section>
 
 <footer>
 
-  <p>
-    Michael Jackson History Project Website
-  </p>
+<p>
+Michael Jackson Complete History Project Website
+</p>
 
 </footer>
 
